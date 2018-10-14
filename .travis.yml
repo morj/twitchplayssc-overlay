@@ -15,6 +15,6 @@ before_install:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -r --delete-after --quiet $TRAVIS_BUILD_DIR/build/ morj.services.buyvm.net:/usr/share/nginx/landing/overlay
+  script: rsync -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -r --delete-after --quiet $TRAVIS_BUILD_DIR/build/ root@morj.services.buyvm.net:/usr/share/nginx/landing/overlay
   on:
     branch: master
