@@ -9,14 +9,10 @@ body {
     overflow: auto;
     max-height: 1080px;
     max-width: 1920px;
-    background: transparent;
+    background: grey;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
