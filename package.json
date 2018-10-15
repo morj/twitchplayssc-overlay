@@ -2,7 +2,7 @@
   "name": "sse-widget",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://morj.github.io/twitchplayssc-overlay",
+  "homepage": "https://besov.net/overlay",
   "dependencies": {
     "node-sass": "^4.9.3",
     "react": "^16.5.2",
