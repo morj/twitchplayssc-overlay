@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/overlay/precache-manifest.517cc382eab563abf32c0cfa970f51cc.js"
+  "/twitchplayssc-overlay/precache-manifest.3c321c4b60a1d302c33a62b23b409c13.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/overlay/index.html", {
+workbox.routing.registerNavigationRoute("/twitchplayssc-overlay/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

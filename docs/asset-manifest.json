@@ -1,13 +1,13 @@
 {
-  "main.css": "/overlay/static/css/main.efca6981.chunk.css",
-  "main.js": "/overlay/static/js/main.1940e5a1.chunk.js",
-  "main.js.map": "/overlay/static/js/main.1940e5a1.chunk.js.map",
-  "static/js/1.7eae6140.chunk.js": "/overlay/static/js/1.7eae6140.chunk.js",
-  "static/js/1.7eae6140.chunk.js.map": "/overlay/static/js/1.7eae6140.chunk.js.map",
-  "runtime~main.js": "/overlay/static/js/runtime~main.19015121.js",
-  "runtime~main.js.map": "/overlay/static/js/runtime~main.19015121.js.map",
-  "static/css/main.efca6981.chunk.css.map": "/overlay/static/css/main.efca6981.chunk.css.map",
-  "index.html": "/overlay/index.html",
-  "precache-manifest.517cc382eab563abf32c0cfa970f51cc.js": "/overlay/precache-manifest.517cc382eab563abf32c0cfa970f51cc.js",
-  "service-worker.js": "/overlay/service-worker.js"
+  "main.css": "/twitchplayssc-overlay/static/css/main.efca6981.chunk.css",
+  "main.js": "/twitchplayssc-overlay/static/js/main.ee3d0abc.chunk.js",
+  "main.js.map": "/twitchplayssc-overlay/static/js/main.ee3d0abc.chunk.js.map",
+  "static/js/1.7eae6140.chunk.js": "/twitchplayssc-overlay/static/js/1.7eae6140.chunk.js",
+  "static/js/1.7eae6140.chunk.js.map": "/twitchplayssc-overlay/static/js/1.7eae6140.chunk.js.map",
+  "runtime~main.js": "/twitchplayssc-overlay/static/js/runtime~main.a0aba946.js",
+  "runtime~main.js.map": "/twitchplayssc-overlay/static/js/runtime~main.a0aba946.js.map",
+  "static/css/main.efca6981.chunk.css.map": "/twitchplayssc-overlay/static/css/main.efca6981.chunk.css.map",
+  "index.html": "/twitchplayssc-overlay/index.html",
+  "precache-manifest.3c321c4b60a1d302c33a62b23b409c13.js": "/twitchplayssc-overlay/precache-manifest.3c321c4b60a1d302c33a62b23b409c13.js",
+  "service-worker.js": "/twitchplayssc-overlay/service-worker.js"
 }
