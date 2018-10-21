@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
 export class OverlayPanel extends Component {
-    constructor(props) {
+    /*constructor(props) {
         super(props);
-        // this.lastChatMessage = null;
-    }
+        this.lastChatMessage = null;
+    }*/
 
     // TODO: componentDidUpdate
 
