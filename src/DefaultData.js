@@ -3,7 +3,7 @@ export class DefaultData {
         const u = '-';
         this.stats = {apm: u, players: u, gamesWon: u, gamesLost: u, aiLevel: 'Unknown'};
         this.empty = {
-            mode: 'full',
+            mode: 'compact',
             stats: this.stats,
             data: [{text: 'Chat'}],
             playerStats: {
