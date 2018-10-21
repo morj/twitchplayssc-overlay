@@ -1,0 +1,77 @@
+.command-card {
+	position: absolute;
+	left:1536px;
+	top: 840px;
+	width: 365px;
+	height: 229px;
+	background-image: url("../images/command_card_bg.png");
+	background-repeat: no-repeat;
+	padding: 25px 0 0 7px;
+}
+
+.icon.disabled {
+	filter: contrast(200%) brightness(15%);
+}
+
+.structure-table
+{
+	table-layout: fixed;
+}
+
+.upgrade-divider {
+	background-image: url("../images/kappa.png");
+	background-size: 46px 46px;
+	filter: contrast(250%) brightness(55%);
+}
+
+.icon {
+	width: 46px;
+	height: 46px;
+}
+
+.icon.building{
+	background-image: url("../images/building_icons.png");
+	background-size: 296px 157px;
+}
+
+.icon.b-gate{ background-position: -149px -2px; }
+.icon.b-forge{ background-position: -198px -2px; }
+.icon.b-core{ background-position: -247px -2px; }
+.icon.b-twilight{ background-position: -51px -51px; }
+.icon.b-stargate{ background-position: -100px -51px; }
+.icon.b-robo{ background-position: -149px -51px; }
+.icon.b-robobay{ background-position: -2px -100px; }
+.icon.b-beacon{ background-position: -247px -51px; }
+.icon.b-shrine{ background-position: -51px -100px; }
+.icon.b-archives{ background-position: -198px -51px; }
+
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+
+.icon.upgrade{
+	background-image: url("../images/building_upgrades_2.png");
+	background-size: 197px 197px;
+}
+
+.icon.u-weapons-ground-1{ background-position: 0px -2px; }
+.icon.u-armor-ground-1{ background-position: -51px -2px; }
+.icon.u-shields-1{ background-position: -102px -2px; }
+.icon.u-adept{ background-position: -149px -3px; }
+
+.icon.u-zealot{ background-position: -2px -52px; }
+.icon.u-stalker{ background-position: -51px -52px; }
+.icon.u-phoenix{ background-position: -102px -52px; }
+.icon.u-storm{ background-position: -149px -52px; }
+
+.icon.u-obs{ background-position: -2px -102px; }
+.icon.u-prism{ background-position: -51px -102px; }
+.icon.u-colossus{ background-position: -101px -103px; }
+.icon.u-warp{ background-position: -149px -102px; }
+
+
+.icon.u-weapons-air-1{ background-position: -0px -152px; }
+.icon.u-armor-air-1{ background-position: -51px -152px; }
+.icon.u-carrier{ background-position: -101px -152px; }
+.icon.u-dt{ background-position: -151px -152px; }
+

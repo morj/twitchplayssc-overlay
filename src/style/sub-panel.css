@@ -1,0 +1,64 @@
+.sub-panel {
+    background: url("../images/sub_panel.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 590px;
+    left: 15px;
+    padding-top: 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 15px;
+    width: 348px;
+    height: 100px;
+}
+
+.table-title {
+    width: 100%;
+    text-align: center;
+    margin: 0px 0 1px 0;
+    font-family: "Michroma";
+}
+
+.table-footer {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 1px 0;
+    font-family: "Michroma";
+}
+
+.sub-table {
+    width: 100%;
+    table-layout: fixed;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0px 15px;
+    font-family: "Michroma";
+    font-size: 10px;
+}
+
+.sub-table td {
+    padding: 1px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.donator {
+    display: inline-block;
+    width: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sub-table-key {
+    width: 80px;
+}
+
+.sub-table-value {
+    color: white;
+}
+
+.donation-amount {
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
