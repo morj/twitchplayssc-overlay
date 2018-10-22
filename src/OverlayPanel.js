@@ -10,15 +10,12 @@ export class OverlayPanel extends Component {
 
     render() {
         const state = this.props.state;
-		const creepingLineElementWidth = 527; // :(
-		const creepingLineStyle = {
-			"width": "527px"
-		};
+		const creepingLineElementWidth = 527; // TODO: extract constants
 		const creepTime = state.creepingLine.text.length / 7;
 		const creepingTextStyle = {
-			"width": state.creepingLine.text.length * 12 + "px",
-			"-webkit-animation-duration": creepTime + "s",
-			"animation-duration": creepTime + "s"
+			width: `${state.creepingLine.text.length * 12}px`,
+			'-webkit-animation-duration': `${creepTime}s`,
+			'animation-duration': `${creepTime}s`
 		};
 		const animationRules = `
 			@keyframes slide {

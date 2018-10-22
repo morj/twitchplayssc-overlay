@@ -2,9 +2,9 @@
     position: absolute;
     top: 0;
     bottom: 0;
-	width: 1920px;
-	height: 1080px;
-	overflow:hidden;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -49,7 +49,7 @@
 }
 
 .creeping-line {
-	/*set in OverlayPanel :(*/
+    /*set in OverlayPanel :(*/
     height: 22px;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .stat-block > .value {
-	position: absolute;
+    position: absolute;
     top: 5px;
     font-size: 20px;
 }
@@ -98,11 +98,11 @@
 
 .unit-portrait-patch {
     background-image: url("../images/main_panel_patch.png");
-	width: 1109px;
-	height: 24px;
-	position: absolute;
-	left: 404px;
-	top: 860px;
+    width: 1109px;
+    height: 24px;
+    position: absolute;
+    left: 404px;
+    top: 860px;
 }
 
 .right-panel {
@@ -118,7 +118,7 @@
     width: 100%;
     font-family: "Michroma";
     color: white;
-	margin-top: -4px;
+    margin-top: -4px;
 }
 
 .player-stat td {
@@ -152,10 +152,10 @@
 }
 
 .player-stat > td > .value {
-	padding-top: 2px;
-	font-family: "Courier New";
-	color: lightblue;
-	font-size: 14px;
+    padding-top: 2px;
+    font-family: "Courier New";
+    color: lightblue;
+    font-size: 14px;
     display: inline-block;
     float: right;
 }
