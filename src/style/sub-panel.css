@@ -9,20 +9,20 @@
     padding-left: 5px;
     padding-bottom: 15px;
     width: 348px;
-    height: 100px;
+    height: 105px;
 }
 
 .table-title {
     width: 100%;
     text-align: center;
-    margin: 0px 0 1px 0;
+    margin: 2px 0 3px 0;
     font-family: "Michroma";
 }
 
 .table-footer {
     width: 100%;
     text-align: center;
-    margin: 0 0 1px 0;
+    margin: -5px 0 1px 0;
     font-family: "Michroma";
 }
 

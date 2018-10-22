@@ -10,8 +10,29 @@ export class OverlayPanel extends Component {
 
     render() {
         const state = this.props.state;
+		const creepingLineElementWidth = 527; // :(
+		const creepingLineStyle = {
+			"width": "527px"
+		};
+		const creepTime = state.creepingLine.text.length / 7;
+		const creepingTextStyle = {
+			"width": state.creepingLine.text.length * 12 + "px",
+			"-webkit-animation-duration": creepTime + "s",
+			"animation-duration": creepTime + "s"
+		};
+		const animationRules = `
+			@keyframes slide {
+				from {
+					transform: translate(` + creepingLineElementWidth + `px, 0); 
+				}
+				to {
+					transform: translate(-100%, 0);
+				}
+			}
+		`;
+
         return (
-            <div className="adjust-me-overlay text-regular">
+			<div className="adjust-me-overlay text-regular">
                 <div className="unit-portrait-patch"/>
                 {state.attentionBanner && state.attentionBanner.enabled &&
                 <div className="global-important-message">{state.attentionBanner.text}</div>}
@@ -19,7 +40,8 @@ export class OverlayPanel extends Component {
                     <div className="left-panel">
                         {state.creepingLine && state.creepingLine.enabled &&
                         <div className="creeping-line">
-                            <div className="text">{state.creepingLine.text}</div>
+							<style dangerouslySetInnerHTML={{__html: animationRules }} />
+                            <div className="text" style={creepingTextStyle}>{state.creepingLine.text}</div>
                         </div>}
                         <div className="stats">
                             <div className="stat-block small">
@@ -39,14 +61,14 @@ export class OverlayPanel extends Component {
                                 <span className="value">{state.stats.aiLevel}</span>
                             </div>
                         </div>
-                        <div className="rtfm"><span className="text-warn">NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page</span>
+                        <div className="rtfm"><span className="text-warn">NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page longer text</span>
                         </div>
                     </div>
                     <div className="right-panel">
                         <table className="detailed-stats">
                             <thead>
                             <tr>
-                                <th>most units killed</th>
+                                <th>enemy units killed</th>
                                 <th>resources spent</th>
                                 <th>resources mined</th>
                             </tr>
@@ -114,7 +136,7 @@ export class OverlayPanel extends Component {
     static statCell(data) {
         return (<td>
             {data && <div className="name" style={
-                {width: `${data.count ? (184 - data.count.toString().length * 10) : 0}px`}
+                {width: `${data.count ? (180 - data.count.toString().length * 10) : 0}px`}
             }>{data.name}</div>}
             {data && <span className="value">{data.count}</span>}
         </td>);

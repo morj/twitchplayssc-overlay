@@ -21,20 +21,20 @@ export class DefaultData {
         // noinspection JSUnusedGlobalSymbols
         this.debug = {
             mode: 'compact',
-            stats: this.stats,
+            stats: {apm: 555, players: 555, gamesWon: 1024, gamesLost: 1024, aiLevel: 'Cheater 3'},
             data: [{text: 'Chat'}],
             playerStats: {
                 topUnitsKilled: [{name: 'super long playername', count: 140}, {
                     name: 'super long playername',
-                    count: 140
-                }, {name: 'super long playername', count: 140}, {
+                    count: 140000
+                }, {name: 'super long playername', count: 140000}, {
                     name: 'superlongplayername',
-                    count: 140
+                    count: 140000
                 }, {name: 'superlongplayername', count: 140}],
-                resourcesSpent: [{name: 'super long player name', count: 150}],
-                resourcesMined: [{name: 'super long player name', count: 160}, {
+                resourcesSpent: [{name: 'super long player name', count: 100050}],
+                resourcesMined: [{name: 'super long player name', count: 1600}, {
                     name: 'super long player name',
-                    count: 160
+                    count: 160000
                 }],
             },
             upgrades: {
@@ -52,7 +52,7 @@ export class DefaultData {
                 enabled: true
             },
             creepingLine: {
-                text: 'Today is a no cheese day. Whoever builds a cannon before 10th minute will get fucked. Latest subscriber: cannonrusher1917',
+                text: 'Would it be possible to change the width attribute in the to portion of the keyframe the width attribute in the to portion of the keyframe',
                 enabled: true
             }
         };
