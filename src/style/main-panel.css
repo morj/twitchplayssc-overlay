@@ -145,7 +145,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width: 140px;
+    width: 140px;
 }
 
 .player-stat > td > .value {

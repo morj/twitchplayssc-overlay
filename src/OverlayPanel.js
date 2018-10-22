@@ -113,7 +113,9 @@ export class OverlayPanel extends Component {
 
     static statCell(data) {
         return (<td>
-            {data && <div className="name">{data.name}</div>}
+            {data && <div className="name" style={
+                {width: `${data.count ? (184 - data.count.toString().length * 10) : 0}px`}
+            }>{data.name}</div>}
             {data && <span className="value">{data.count}</span>}
         </td>);
     }
