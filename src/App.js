@@ -36,6 +36,9 @@ class App extends Component {
                 case 'update':
                     app.setState(Object.assign(app.state, payload));
                     break;
+                case 'reload':
+                    window.location.reload(true);
+                    break;
                 default:
                     console.log('pong');
             }
