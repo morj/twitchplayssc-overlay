@@ -8,8 +8,7 @@ export class DefaultData {
             data: [{text: 'Chat'}],
             playerStats: {
                 topUnitsKilled: [{}, {}, {}, {}, {}],
-                resourcesSpent: [{}, {}, {}, {}, {}],
-                resourcesMined: [{}, {}, {}, {}, {}],
+                xpGained: [{}, {}, {}, {}, {}]
             },
             upgrades: {},
             topDonations: {
@@ -31,15 +30,12 @@ export class DefaultData {
                     name: 'superlongplayername',
                     count: 140000
                 }, {name: 'superlongplayername', count: 140}],
-                resourcesSpent: [{name: 'super long player name', count: 100050}],
-                resourcesMined: [{name: 'super long player name', count: 1600}, {
-                    name: 'super long player name',
-                    count: 160000
-                }],
+                xpGained: [{name: 'super long player name', count: 100050}]
             },
             upgrades: {
                 gate: {enabled: true},
-                colossus: {enabled: true}
+                colossus: {enabled: true},
+				"weapons-ground-1": {enabled: true}
             },
             topDonations: {
                 enabled: true,

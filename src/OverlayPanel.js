@@ -10,10 +10,10 @@ export class OverlayPanel extends Component {
 
     render() {
         const state = this.props.state;
-		const creepingLineElementWidth = 527; // TODO: extract constants
+		const creepingLineElementWidth = 635; // TODO: extract constants
 		const creepTime = state.creepingLine.text.length / 7;
 		const creepingTextStyle = {
-			width: `${state.creepingLine.text.length * 12}px`,
+			width: `${state.creepingLine.text.length * 16}px`,
 			'-webkit-animation-duration': `${creepTime}s`,
 			'animation-duration': `${creepTime}s`
 		};
@@ -66,15 +66,13 @@ export class OverlayPanel extends Component {
                             <thead>
                             <tr>
                                 <th>enemy units killed</th>
-                                <th>resources spent</th>
-                                <th>resources mined</th>
+                                <th>xp gained</th>
                             </tr>
                             </thead>
                             <tbody>
                             {[0, 1, 2, 3, 4].map((i) => <tr key={i} className="player-stat">
                                 {OverlayPanel.statCell(state.playerStats.topUnitsKilled[i])}
-                                {OverlayPanel.statCell(state.playerStats.resourcesSpent[i])}
-                                {OverlayPanel.statCell(state.playerStats.resourcesMined[i])}
+                                {OverlayPanel.statCell(state.playerStats.xpGained[i])}
                             </tr>)}
                             </tbody>
                         </table>
@@ -133,7 +131,7 @@ export class OverlayPanel extends Component {
     static statCell(data) {
         return (<td>
             {data && <div className="name" style={
-                {width: `${data.count ? (180 - data.count.toString().length * 10) : 0}px`}
+                {width: `${data.count ? (210 - data.count.toString().length * 10) : 0}px`}
             }>{data.name}</div>}
             {data && <span className="value">{data.count}</span>}
         </td>);

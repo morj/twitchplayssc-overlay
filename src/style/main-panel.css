@@ -44,13 +44,16 @@
 
 .left-panel {
     display: inline-block;
-    width: 530px;
+    width: 635px;
     height: 100%;
 }
 
 .creeping-line {
     /*set in OverlayPanel :(*/
-    height: 22px;
+    height: 27px;
+	letter-spacing: 2px;
+	font-weight: bolder;
+	font-size: 20px;
 }
 
 .stats {
@@ -58,30 +61,32 @@
 }
 
 .stat-block.small {
-    width: 104px;
+    width: 125px;
 }
 
 .stat-block.large {
-    width: 160px;
+    width: 190px;
 }
 
 .stat-block {
     position: relative;
     display: inline-block;
-    width: 150px;
+    width: 175px;
     height: 52px;
 }
 
 .stat-block > .key {
-    position: absolute;
-    bottom: 5px;
+	position: absolute;
+    bottom: 2px;
     font-size: 15px;
     color: #71a3f8;
+	font-size: 19px;
+	letter-spacing: 2px;
 }
 
 .stat-block > .value {
     position: absolute;
-    top: 5px;
+    top: 0px;
     font-size: 20px;
 }
 
@@ -90,6 +95,8 @@
     width: 100%;
     height: 60px;
     font-size: 16px;
+	letter-spacing: 2px;
+	font-weight: bolder;
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -108,7 +115,7 @@
 .right-panel {
     display: inline-block;
     float: right;
-    width: 588px;
+    width: 470px;
     height: 100px;
 }
 
@@ -123,9 +130,9 @@
 
 .player-stat td {
     font-family: "Michroma";
-    font-size: 12px;
+    
     color: white;
-    padding: 5px;
+    padding: 1px;
     padding-right: 7px;
     border-right: 1px #71a3f8 solid;
     border-left: 1px #71a3f8 solid;
@@ -133,7 +140,8 @@
 
 .detailed-stats th {
     font-family: "Michroma";
-    font-size: 14px;
+	letter-spacing: 1px;
+    font-size: 16px;
     color: white;
     text-align: left;
     padding: 2px 5px 3px;
@@ -149,13 +157,18 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     width: 130px;
+	margin-left: 3px;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 1px;
 }
 
 .player-stat > td > .value {
-    padding-top: 2px;
+    padding-top: 6px;
     font-family: "Courier New";
     color: lightblue;
-    font-size: 14px;
+    font-size: 16px;
+	font-weight: bolder;
     display: inline-block;
     float: right;
 }
