@@ -58,7 +58,7 @@ export class OverlayPanel extends Component {
                                 <span className="value">{state.stats.aiLevel}</span>
                             </div>
                         </div>
-                        <div className="rtfm"><span className="text-warn">NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page longer text</span>
+                        <div className="rtfm"><span className="text-warn">{state.staticNote.text}</span>
                         </div>
                     </div>
                     <div className="right-panel">

@@ -15,7 +15,8 @@ export class DefaultData {
                 enabled: false
             },
             attentionBanner: {text: '', enabled: false},
-            creepingLine: {text: '', enabled: false}
+            creepingLine: {text: '', enabled: false},
+			staticNote: {text: 'NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page'}
         };
         // noinspection JSUnusedGlobalSymbols
         this.debug = {
@@ -50,7 +51,10 @@ export class DefaultData {
             creepingLine: {
                 text: 'Would it be possible to change the width attribute in the to portion of the keyframe the width attribute in the to portion of the keyframe',
                 enabled: true
-            }
+            },
+			staticNote: {
+				text: 'NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page'
+			}
         };
     }
 }
