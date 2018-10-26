@@ -49,7 +49,7 @@ export class DefaultData {
                 enabled: true
             },
             creepingLine: {
-                text: 'Would it be possible to change the width attribute in the to portion of the keyframe the width attribute in the to portion of the keyframe',
+                text: 'Would it be possible to change the width <span style="color:red">attribute in the to portion</span> of the keyframe the width attribute in the to portion of the keyframe',
                 enabled: true
             },
 			staticNote: {

@@ -38,7 +38,9 @@ export class OverlayPanel extends Component {
                         {state.creepingLine && state.creepingLine.enabled &&
                         <div className="creeping-line">
 							<style dangerouslySetInnerHTML={{__html: animationRules }} />
-                            <div className="text" style={creepingTextStyle}>{state.creepingLine.text}</div>
+                            <div className="text" style={creepingTextStyle}
+								dangerouslySetInnerHTML={{__html: state.creepingLine.text }}>
+							</div>
                         </div>}
                         <div className="stats">
                             <div className="stat-block small">
