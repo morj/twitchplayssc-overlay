@@ -84,19 +84,21 @@ export class OverlayPanel extends Component {
                     <table className="structure-table">
                         <tbody>
                         <tr>
-                            {this.buildings('gate', 'forge', 'core', 'robo', 'twilight', 'shrine', 'stargate')}
+                            {this.buildings('forge', 'core', 'twilight', 'robobay', 'beacon', 'archives', 'shrine')}
                         </tr>
                         <tr>
-                            {this.buildings('robobay', 'archives', 'beacon')}
-                            <td className="upgrade-divider"/>
-                            {this.upgrades('weapons-ground-1', 'armor-ground-1', 'shields-1')}
+                            {this.upgrades('weapons-ground', 'weapons-air')}
+							{this.researches('zealot', 'obs', 'phoenix', 'storm', 'dt')}
                         </tr>
                         <tr>
-                            {this.upgrades('warp', 'zealot', 'stalker', 'adept', 'storm', 'colossus', 'dt')}
+                            {this.upgrades('armor-ground', 'armor-air')}
+							{this.researches('stalker', 'prism', 'carrier')}
+							<td/><td/>
                         </tr>
                         <tr>
-                            {this.upgrades('weapons-air-1', 'armor-air-1', 'obs', 'phoenix', 'prism', 'carrier')}
-                            <td/>
+                            {this.upgrades('shields')}
+							{this.researches('warp', 'adept', 'colossus')}
+							{this.buildings('gate', 'robo', 'stargate')}
                         </tr>
                         </tbody>
                     </table>
@@ -142,16 +144,38 @@ export class OverlayPanel extends Component {
     upgrade(type, clazz) {
         let style = 'icon';
         let data = (this.props.state.upgrades || {})[clazz];
+		let innerHtml = '';
+		
+		// whether the icon is disabled or not is determined solely by the enabled flag
         if (!data || !data.enabled) {
             style = `${style} disabled`;
         }
-        if (type === 'upgrade') {
-            style = `${style} upgrade u-${clazz}`;
-        }
-        if (type === 'building') {
-            style = `${style} building b-${clazz}`;
-        }
-        return (<td className={style} key={clazz}/>);
+		
+		// state in ('', 'present', 'incomplete')
+		if (data && data.state !== null && data.state != '' && data.state != 'present') {
+			style = `${style} state-${data.state}`;
+		}
+			
+		// researches are also upgrades
+		if (type === 'upgrade') {
+			style = `${style} upgrade u-${clazz}`;
+			
+			// level == 0 - no upgrade, > 0 - level of upgrade
+			// level for researches is always -1 and is ignored
+			// we agree that it's always sent. the defulat of 0 is here for convenience
+			let upgradeLevel = (data && data.level) ? data.level : 0;
+			style = `${style} level${upgradeLevel}`;
+		} else if (type === 'building') {
+			style = `${style} building b-${clazz}`;
+			
+			// quantity = number of buildings of that type currently on the map
+			if (data && data.quantity && data.quantity > 1) {
+				innerHtml = `<span class='icon-text-layer '>${data.quantity}</span>`
+			}
+		} else if (type === 'research') {
+			style = `${style} research r-${clazz}`;
+		}
+		return (<td className={style} key={clazz} dangerouslySetInnerHTML={{__html: innerHtml}}/>);
     }
 
     buildings(...args) {
@@ -160,5 +184,9 @@ export class OverlayPanel extends Component {
 
     upgrades(...args) {
         return (args.map((name) => (this.upgrade('upgrade', name))));
+    }
+	
+	researches(...args) {
+        return (args.map((name) => (this.upgrade('research', name))));
     }
 }

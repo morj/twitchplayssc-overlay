@@ -34,9 +34,18 @@ export class DefaultData {
                 xpGained: [{name: 'super long player name', count: 100050}]
             },
             upgrades: {
-                gate: {enabled: true},
+                gate: {enabled: true, quantity: 21},
+				forge: {enabled: true, quantity: 1},
                 colossus: {enabled: true},
-				"weapons-ground-1": {enabled: true}
+				"weapons-ground": {enabled: true},
+				"weapons-air": {enabled: true, level: 2},
+				shields: {enabled: true, level: 1},
+				stargate: {enabled: false, quantity: 0},
+				robobay: {enabled: false},
+				robo: {enabled: true, quantity: 2},
+				adept: {enabled: false},
+				zealot: {enabled: true, level: -1},
+				stalker: {enabled: true, level: 1}
             },
             topDonations: {
                 enabled: true,

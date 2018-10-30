@@ -6,11 +6,11 @@
 	height: 229px;
 	background-image: url("../images/command_card_bg.png");
 	background-repeat: no-repeat;
-	padding: 25px 0 0 7px;
+	padding: 18px 0 0 7px;
 }
 
 .icon.disabled {
-	filter: contrast(200%) brightness(15%);
+	filter: contrast(200%) brightness(20%);
 }
 
 .structure-table
@@ -18,60 +18,129 @@
 	table-layout: fixed;
 }
 
-.upgrade-divider {
-	background-image: url("../images/kappa.png");
-	background-size: 46px 46px;
-	filter: contrast(250%) brightness(55%);
+.icon-text-layer
+{
+	/* TODO */
+	position: relative;
+	bottom: 0px;
+	width: 20px;
+	height: 25px;
+	color: white;
+	font-weight: bold;
+	text-align: left;
+	font-size: 25px;
+	text-shadow: 4px 4px 2px black, -4px -4px 2px black, ;
+	/* background-color: black;*/
+	/*padding: 2px 7px;*/
 }
 
 .icon {
 	width: 46px;
 	height: 46px;
+	background-size: 53px 53px;
+	background-position: -3px -3px;
+	text-align: center;
 }
 
-.icon.building{
-	background-image: url("../images/building_icons.png");
-	background-size: 296px 157px;
+/* 'wireframe' icons are special */
+.icon.building.disabled {
+	background-size: 48px 48px;
+	background-position: -1px -1px;
 }
 
-.icon.b-gate{ background-position: -149px -2px; }
-.icon.b-forge{ background-position: -198px -2px; }
-.icon.b-core{ background-position: -247px -2px; }
-.icon.b-twilight{ background-position: -51px -51px; }
-.icon.b-stargate{ background-position: -100px -51px; }
-.icon.b-robo{ background-position: -149px -51px; }
-.icon.b-robobay{ background-position: -2px -100px; }
-.icon.b-beacon{ background-position: -247px -51px; }
-.icon.b-shrine{ background-position: -51px -100px; }
-.icon.b-archives{ background-position: -198px -51px; }
+.icon.b-gate{ background-image: url("../images/icons/btn-building-protoss-gateway.png"); }
+.icon.b-gate.disabled{ background-image: url("../images/icons/btn-building-protoss-gateway.png"); }
+
+.icon.b-forge{ background-image: url("../images/icons/btn-building-protoss-forge.png"); }
+.icon.b-forge.disabled{ background-image: url("../images/icons/wireframe-protoss-forge.png"); }
+
+.icon.b-core{ background-image: url("../images/icons/btn-building-protoss-cyberneticscore.png"); }
+.icon.b-core.disabled{ background-image: url("../images/icons/wireframe-protoss-cyberneticscore.png"); }
+
+.icon.b-twilight{ background-image: url("../images/icons/btn-building-protoss-twilightcouncil.png"); }
+.icon.b-twilight.disabled{ background-image: url("../images/icons/wireframe-protoss-twilightcouncil.png"); }
+
+.icon.b-stargate{ background-image: url("../images/icons/btn-building-protoss-stargate.png"); }
+.icon.b-stargate.disabled{ background-image: url("../images/icons/wireframe-protoss-stargate.png"); }
+
+.icon.b-robo{ background-image: url("../images/icons/btn-building-protoss-roboticsfacility.png"); }
+.icon.b-robo.disabled{ background-image: url("../images/icons/wireframe-protoss-roboticsfacility.png"); }
+
+.icon.b-robobay{ background-image: url("../images/icons/btn-building-protoss-roboticssupportbay.png"); }
+.icon.b-robobay.disabled{ background-image: url("../images/icons/wireframe-protoss-roboticssupportbay.png"); }
+
+.icon.b-beacon{ background-image: url("../images/icons/btn-building-protoss-fleetbeacon.png"); }
+.icon.b-beacon.disabled{ background-image: url("../images/icons/wireframe-protoss-fleetbeacon.png"); }
+
+.icon.b-shrine{ background-image: url("../images/icons/btn-building-protoss-darkshrine.png"); }
+.icon.b-shrine.disabled{ background-image: url("../images/icons/wireframe-protoss-darkshrine.png"); }
+
+.icon.b-archives{ background-image: url("../images/icons/btn-building-protoss-templararchives.png"); }
+.icon.b-archives.disabled{ background-image: url("../images/icons/wireframe-protoss-templararchives.png"); }
 
 /*-----------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------*/
 
 .icon.upgrade{
-	background-image: url("../images/building_upgrades_2.png");
-	background-size: 197px 197px;
+	
 }
 
-.icon.u-weapons-ground-1{ background-position: 0px -2px; }
-.icon.u-armor-ground-1{ background-position: -51px -2px; }
-.icon.u-shields-1{ background-position: -102px -2px; }
-.icon.u-adept{ background-position: -149px -3px; }
+.icon.u-weapons-ground.level0{ background-image: url("../images/icons/btn-upgrade-protoss-groundweaponslevel0.png"); }
+.icon.u-weapons-ground.level1{ background-image: url("../images/icons/btn-upgrade-protoss-groundweaponslevel1.png"); }
+.icon.u-weapons-ground.level2{ background-image: url("../images/icons/btn-upgrade-protoss-groundweaponslevel2.png"); }
+.icon.u-weapons-ground.level3{ background-image: url("../images/icons/btn-upgrade-protoss-groundweaponslevel3.png"); }
 
-.icon.u-zealot{ background-position: -2px -52px; }
-.icon.u-stalker{ background-position: -51px -52px; }
-.icon.u-phoenix{ background-position: -102px -52px; }
-.icon.u-storm{ background-position: -149px -52px; }
+.icon.u-armor-ground.level0{ background-image: url("../images/icons/btn-upgrade-protoss-groundarmorlevel0.png"); }
+.icon.u-armor-ground.level1{ background-image: url("../images/icons/btn-upgrade-protoss-groundarmorlevel1.png"); }
+.icon.u-armor-ground.level2{ background-image: url("../images/icons/btn-upgrade-protoss-groundarmorlevel2.png"); }
+.icon.u-armor-ground.level3{ background-image: url("../images/icons/btn-upgrade-protoss-groundarmorlevel3.png"); }
 
-.icon.u-obs{ background-position: -2px -102px; }
-.icon.u-prism{ background-position: -51px -102px; }
-.icon.u-colossus{ background-position: -101px -103px; }
-.icon.u-warp{ background-position: -149px -102px; }
+.icon.u-shields.level0{ background-image: url("../images/icons/btn-upgrade-protoss-shieldslevel0.png"); }
+.icon.u-shields.level1{ background-image: url("../images/icons/btn-upgrade-protoss-shieldslevel1.png"); }
+.icon.u-shields.level2{ background-image: url("../images/icons/btn-upgrade-protoss-shieldslevel2.png"); }
+.icon.u-shields.level3{ background-image: url("../images/icons/btn-upgrade-protoss-shieldslevel3.png"); }
+
+.icon.u-weapons-air.level0{ background-image: url("../images/icons/btn-upgrade-protoss-airweaponslevel0.png"); }
+.icon.u-weapons-air.level1{ background-image: url("../images/icons/btn-upgrade-protoss-airweaponslevel1.png"); }
+.icon.u-weapons-air.level2{ background-image: url("../images/icons/btn-upgrade-protoss-airweaponslevel2.png"); }
+.icon.u-weapons-air.level3{ background-image: url("../images/icons/btn-upgrade-protoss-airweaponslevel3.png"); }
+
+.icon.u-armor-air.level0{ background-image: url("../images/icons/btn-upgrade-protoss-airarmorlevel0.png"); }
+.icon.u-armor-air.level1{ background-image: url("../images/icons/btn-upgrade-protoss-airarmorlevel1.png"); }
+.icon.u-armor-air.level2{ background-image: url("../images/icons/btn-upgrade-protoss-airarmorlevel2.png"); }
+.icon.u-armor-air.level3{ background-image: url("../images/icons/btn-upgrade-protoss-airarmorlevel3.png"); }
 
 
-.icon.u-weapons-air-1{ background-position: -0px -152px; }
-.icon.u-armor-air-1{ background-position: -51px -152px; }
-.icon.u-carrier{ background-position: -101px -152px; }
-.icon.u-dt{ background-position: -151px -152px; }
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+
+
+.icon.r-warp{ background-image: url("../images/icons/btn-building-protoss-forge.png"); }
+
+.icon.r-adept{ background-image: url("../images/icons/btn-upgrade-protoss-resonatingglaives-color.png"); }
+/*.icon.r-adept.disabled{ background-image: url("../images/icons/btn-upgrade-protoss-resonatingglaives.png"); } */
+
+.icon.r-zealot{ background-image: url("../images/icons/btn-ability-protoss-charge-color.png"); }
+/*.icon.r-zealot.disabled{ background-image: url("../images/icons/btn-ability-protoss-charge.png"); } */
+
+.icon.r-stalker{ background-image: url("../images/icons/btn-ability-protoss-blink-color.png"); }
+/*.icon.r-stalker.disabled{ background-image: url("../images/icons/btn-ability-protoss-blink.png"); }*/
+
+.icon.r-storm{ background-image: url("../images/icons/btn-ability-protoss-psistorm-color.png"); }
+/*.icon.r-storm.disabled{ background-image: url("../images/icons/btn-ability-protoss-psistorm.png"); }*/
+
+.icon.r-dt{ background-image: url("../images/icons/btn-ability-protoss-shadowdash.png"); }
+.icon.r-colossus{ background-image: url("../images/icons/btn-upgrade-protoss-extendedthermallance.png"); }
+
+.icon.r-phoenix{ background-image: url("../images/icons/btn-upgrade-protoss-phoenixrange.png"); }
+.icon.r-obs{ background-image: url("../images/icons/btn-upgrade-protoss-graviticbooster.png"); }
+.icon.r-prism{ background-image: url("../images/icons/btn-upgrade-protoss-graviticdrive.png"); }
+.icon.r-carrier{ background-image: url("../images/icons/btn-upgrade-protoss-gravitoncatapult.png"); }
+
+
+
+
+
 
