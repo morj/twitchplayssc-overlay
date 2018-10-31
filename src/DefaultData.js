@@ -34,8 +34,8 @@ export class DefaultData {
                 xpGained: [{name: 'super long player name', count: 100050}]
             },
             upgrades: {
-                gate: {enabled: true, quantity: 21},
-				forge: {enabled: true, quantity: 1},
+                gate: {enabled: true, quantity: 21, state: 'unpowered'},
+				forge: {enabled: true, quantity: 2, state: 'incomplete'},
                 colossus: {enabled: true},
 				"weapons-ground": {enabled: true},
 				"weapons-air": {enabled: true, level: 2},

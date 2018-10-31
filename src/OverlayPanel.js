@@ -151,11 +151,6 @@ export class OverlayPanel extends Component {
             style = `${style} disabled`;
         }
 		
-		// state in ('', 'present', 'incomplete')
-		if (data && data.state !== null && data.state != '' && data.state != 'present') {
-			style = `${style} state-${data.state}`;
-		}
-			
 		// researches are also upgrades
 		if (type === 'upgrade') {
 			style = `${style} upgrade u-${clazz}`;
@@ -170,12 +165,24 @@ export class OverlayPanel extends Component {
 			
 			// quantity = number of buildings of that type currently on the map
 			if (data && data.quantity && data.quantity > 1) {
-				innerHtml = `<span class='icon-text-layer '>${data.quantity}</span>`
+				innerHtml += `<span class='icon-text-layer'>${data.quantity}</span>`
 			}
 		} else if (type === 'research') {
 			style = `${style} research r-${clazz}`;
 		}
-		return (<td className={style} key={clazz} dangerouslySetInnerHTML={{__html: innerHtml}}/>);
+		
+		// state in ('', 'present', 'incomplete', 'unpowered')
+		let parentTdClass = null;
+		if (data && data.state !== null && data.state !== '' && data.state !== 'present') {
+			parentTdClass = `state-${data.state}`;
+		}
+		
+		// apply accumulated style to the icon div.
+		// we used to apply it to the td, but that meant the filter in .disabled/unpowered would affect everything inside it
+		// whereas it should only affect the icon
+		innerHtml = `<div class="${style}"></div>${innerHtml}`;
+		
+		return (<td className={parentTdClass} key={clazz} dangerouslySetInnerHTML={{__html: innerHtml}}/>);
     }
 
     buildings(...args) {
