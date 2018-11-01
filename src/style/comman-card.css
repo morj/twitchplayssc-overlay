@@ -74,7 +74,7 @@ td.state-incomplete {
 }
 
 .icon.disabled { filter: contrast(200%) brightness(20%); }
-.icon.state-incomplete { filter: contrast(200%) brightness(55%); }
+td.state-incomplete  .icon { filter: contrast(200%) brightness(55%); }
 
 /* 'wireframe' icons are special */
 .icon.building.disabled {
@@ -170,7 +170,7 @@ td.state-incomplete {
 /*-----------------------------------------------------------------------------------*/
 
 
-.icon.r-warp{ background-image: url("../images/icons/btn-building-protoss-forge.png"); }
+.icon.r-warp{ background-image: url("../images/icons/btn-building-protoss-warpgate.png"); }
 
 .icon.r-adept{ background-image: url("../images/icons/btn-upgrade-protoss-resonatingglaives-color.png"); }
 /*.icon.r-adept.disabled{ background-image: url("../images/icons/btn-upgrade-protoss-resonatingglaives.png"); } */
