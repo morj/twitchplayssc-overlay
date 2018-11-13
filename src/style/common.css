@@ -1,0 +1,25 @@
+.adjust-me-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.text-regular {
+    color: white;
+}
+
+.text-header {
+    color: #71a3f8;
+}
+
+.text-warn {
+    /*color: #f4faba;*/
+    color: #c5a79a;
+}
