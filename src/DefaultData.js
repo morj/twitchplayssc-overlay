@@ -1,10 +1,9 @@
 export class DefaultData {
     constructor() {
         const u = '-';
-        this.stats = {apm: u, players: u, gamesWon: u, gamesLost: u, aiLevel: 'Unknown'};
         this.empty = {
             mode: 'compact',
-            stats: this.stats,
+            stats: {apm: u, players: u, gamesWon: u, gamesLost: u, aiLevel: 'Unknown'},
             data: [{text: 'Chat'}],
             playerStats: {
                 topUnitsKilled: [{}, {}, {}, {}, {}],
@@ -16,7 +15,7 @@ export class DefaultData {
             },
             attentionBanner: {text: '', enabled: false},
             creepingLine: {text: '', enabled: false},
-			staticNote: {text: 'NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page'}
+            staticNote: {text: 'NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page'}
         };
         // noinspection JSUnusedGlobalSymbols
         this.debug = {
@@ -35,17 +34,17 @@ export class DefaultData {
             },
             upgrades: {
                 gate: {enabled: true, quantity: 21, state: 'unpowered'},
-				forge: {enabled: true, quantity: 2, state: 'incomplete'},
+                forge: {enabled: true, quantity: 2, state: 'incomplete'},
                 colossus: {enabled: true},
-				"weapons-ground": {enabled: true},
-				"weapons-air": {enabled: true, level: 2},
-				shields: {enabled: true, level: 1},
-				stargate: {enabled: false, quantity: 0},
-				robobay: {enabled: false},
-				robo: {enabled: true, quantity: 2},
-				adept: {enabled: false},
-				zealot: {enabled: true, level: -1},
-				stalker: {enabled: true, level: 1}
+                "weapons-ground": {enabled: true},
+                "weapons-air": {enabled: true, level: 2},
+                shields: {enabled: true, level: 1},
+                stargate: {enabled: false, quantity: 0},
+                robobay: {enabled: false},
+                robo: {enabled: true, quantity: 2},
+                adept: {enabled: false},
+                zealot: {enabled: true, level: -1},
+                stalker: {enabled: true, level: 1}
             },
             topDonations: {
                 enabled: true,
@@ -58,12 +57,12 @@ export class DefaultData {
                 enabled: true
             },
             creepingLine: {
-                text: 'Would it be possible to change the width <span style="color:red">attribute in the to portion</span> of the keyframe the width attribute in the to portion of the keyframe',
+                text: 'Would it be possible to change the width <span style="color: red;">attribute in the to portion</span> of the keyframe the width attribute in the to portion of the keyframe',
                 enabled: true
             },
-			staticNote: {
-				text: 'NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page'
-			}
+            staticNote: {
+                text: 'NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page'
+            }
         };
     }
 }

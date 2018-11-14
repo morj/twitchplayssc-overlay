@@ -10,14 +10,14 @@ export class OverlayPanel extends Component {
 
     render() {
         const state = this.props.state;
-		const creepingLineElementWidth = 635; // TODO: extract constants
-		const creepTime = state.creepingLine.text.length / 7;
-		const creepingTextStyle = {
-			width: `${state.creepingLine.text.length * 16}px`,
-			'-webkit-animation-duration': `${creepTime}s`,
-			'animation-duration': `${creepTime}s`
-		};
-		const animationRules = `
+        const creepingLineElementWidth = 635; // TODO: extract constants
+        const creepTime = state.creepingLine.text.length / 7;
+        const creepingTextStyle = {
+            width: `${state.creepingLine.text.length * 16}px`,
+            '-webkit-animation-duration': `${creepTime}s`,
+            'animation-duration': `${creepTime}s`
+        };
+        const animationRules = `
 			@keyframes slide {
 				from {
 					transform: translate(` + creepingLineElementWidth + `px, 0); 
@@ -29,7 +29,7 @@ export class OverlayPanel extends Component {
 		`;
 
         return (
-			<div className="adjust-me-overlay text-regular">
+            <div className="adjust-me-overlay text-regular">
                 <div className="unit-portrait-patch"/>
                 {state.attentionBanner && state.attentionBanner.enabled &&
                 <div className="global-important-message">{state.attentionBanner.text}</div>}
@@ -37,10 +37,10 @@ export class OverlayPanel extends Component {
                     <div className="left-panel">
                         {state.creepingLine && state.creepingLine.enabled &&
                         <div className="creeping-line">
-							<style dangerouslySetInnerHTML={{__html: animationRules }} />
+                            <style dangerouslySetInnerHTML={{__html: animationRules}}/>
                             <div className="text" style={creepingTextStyle}
-								dangerouslySetInnerHTML={{__html: state.creepingLine.text }}>
-							</div>
+                                 dangerouslySetInnerHTML={{__html: state.creepingLine.text}}>
+                            </div>
                         </div>}
                         <div className="stats">
                             <div className="stat-block small">
@@ -88,17 +88,18 @@ export class OverlayPanel extends Component {
                         </tr>
                         <tr>
                             {this.upgrades('weapons-ground', 'weapons-air')}
-							{this.researches('zealot', 'obs', 'phoenix', 'storm', 'dt')}
+                            {this.researches('zealot', 'obs', 'phoenix', 'storm', 'dt')}
                         </tr>
                         <tr>
                             {this.upgrades('armor-ground', 'armor-air')}
-							{this.researches('stalker', 'prism', 'carrier')}
-							<td/><td/>
+                            {this.researches('stalker', 'prism', 'carrier')}
+                            <td/>
+                            <td/>
                         </tr>
                         <tr>
                             {this.upgrades('shields')}
-							{this.researches('warp', 'adept', 'colossus')}
-							{this.buildings('gate', 'robo', 'stargate')}
+                            {this.researches('warp', 'adept', 'colossus')}
+                            {this.buildings('gate', 'robo', 'stargate')}
                         </tr>
                         </tbody>
                     </table>
@@ -144,45 +145,45 @@ export class OverlayPanel extends Component {
     upgrade(type, clazz) {
         let style = 'icon';
         let data = (this.props.state.upgrades || {})[clazz];
-		let innerHtml = '';
-		
-		// whether the icon is disabled or not is determined solely by the enabled flag
+        let innerHtml = '';
+
+        // whether the icon is disabled or not is determined solely by the enabled flag
         if (!data || !data.enabled) {
             style = `${style} disabled`;
         }
-		
-		// researches are also upgrades
-		if (type === 'upgrade') {
-			style = `${style} upgrade u-${clazz}`;
-			
-			// level == 0 - no upgrade, > 0 - level of upgrade
-			// level for researches is always -1 and is ignored
-			// we agree that it's always sent. the defulat of 0 is here for convenience
-			let upgradeLevel = (data && data.level) ? data.level : 0;
-			style = `${style} level${upgradeLevel}`;
-		} else if (type === 'building') {
-			style = `${style} building b-${clazz}`;
-			
-			// quantity = number of buildings of that type currently on the map
-			if (data && data.quantity && data.quantity > 1) {
-				innerHtml += `<span class='icon-text-layer'>${data.quantity}</span>`
-			}
-		} else if (type === 'research') {
-			style = `${style} research r-${clazz}`;
-		}
-		
-		// state in ('', 'present', 'incomplete', 'unpowered')
-		let parentTdClass = null;
-		if (data && data.state !== null && data.state !== '' && data.state !== 'present') {
-			parentTdClass = `state-${data.state}`;
-		}
-		
-		// apply accumulated style to the icon div.
-		// we used to apply it to the td, but that meant the filter in .disabled/unpowered would affect everything inside it
-		// whereas it should only affect the icon
-		innerHtml = `<div class="${style}"></div>${innerHtml}`;
-		
-		return (<td className={parentTdClass} key={clazz} dangerouslySetInnerHTML={{__html: innerHtml}}/>);
+
+        // researches are also upgrades
+        if (type === 'upgrade') {
+            style = `${style} upgrade u-${clazz}`;
+
+            // level == 0 - no upgrade, > 0 - level of upgrade
+            // level for researches is always -1 and is ignored
+            // we agree that it's always sent. the defulat of 0 is here for convenience
+            let upgradeLevel = (data && data.level) ? data.level : 0;
+            style = `${style} level${upgradeLevel}`;
+        } else if (type === 'building') {
+            style = `${style} building b-${clazz}`;
+
+            // quantity = number of buildings of that type currently on the map
+            if (data && data.quantity && data.quantity > 1) {
+                innerHtml += `<span class='icon-text-layer'>${data.quantity}</span>`
+            }
+        } else if (type === 'research') {
+            style = `${style} research r-${clazz}`;
+        }
+
+        // state in ('', 'present', 'incomplete', 'unpowered')
+        let parentTdClass = null;
+        if (data && data.state !== null && data.state !== '' && data.state !== 'present') {
+            parentTdClass = `state-${data.state}`;
+        }
+
+        // apply accumulated style to the icon div.
+        // we used to apply it to the td, but that meant the filter in .disabled/unpowered would affect everything inside it
+        // whereas it should only affect the icon
+        innerHtml = `<div class="${style}"></div>${innerHtml}`;
+
+        return (<td className={parentTdClass} key={clazz} dangerouslySetInnerHTML={{__html: innerHtml}}/>);
     }
 
     buildings(...args) {
@@ -192,8 +193,8 @@ export class OverlayPanel extends Component {
     upgrades(...args) {
         return (args.map((name) => (this.upgrade('upgrade', name))));
     }
-	
-	researches(...args) {
+
+    researches(...args) {
         return (args.map((name) => (this.upgrade('research', name))));
     }
 }
