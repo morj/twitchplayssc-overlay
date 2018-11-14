@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './style/entrypoint.scss';
 
 import {OverlayPanel} from './OverlayPanel';
+import {LeaderBoards} from './LeaderBoards';
 import {DefaultData} from './DefaultData';
 
 class App extends Component {
@@ -57,6 +58,7 @@ class App extends Component {
             <div className="App">
                 {{
                     compact: <OverlayPanel state={app.state}/>,
+                    leaderboards: <LeaderBoards state={app.state}/>,
                     full: <div className="lobby-overlay text-regular">
                         <div className="lobby-panel chat">{
                             app.state.data.map((item, index) => <div key={index} className="message">
