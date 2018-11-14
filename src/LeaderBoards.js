@@ -9,7 +9,7 @@ export class LeaderBoards extends Component {
     // TODO: componentDidUpdate
 
     render() {
-        const state = this.props.state;
+        // const state = this.props.state;
 
         return (
             <div className="adjust-me-overlay text-regular">
