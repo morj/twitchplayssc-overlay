@@ -19,7 +19,7 @@ export class DefaultData {
         };
         // noinspection JSUnusedGlobalSymbols
         this.debug = {
-            mode: 'compact',
+            mode: 'leaderboards',
             stats: {apm: 555, players: 555, gamesWon: 1024, gamesLost: 1024, aiLevel: 'Cheater 3'},
             data: [{text: 'Chat'}],
             playerStats: {

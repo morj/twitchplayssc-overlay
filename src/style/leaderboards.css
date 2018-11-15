@@ -10,8 +10,8 @@ body {
     padding: 50px 0;
     font-family: "Michroma";
     font-size: 30px;
-    background-color: black;
-    text-align: center;
+    background-image: url("../images/leaderboards_bg.png");
+	text-align: center;
 }
 
 .fullmode-gamestats {
@@ -21,23 +21,41 @@ body {
 
 .gamestat.result {
     display: block;
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: 100px;
 }
 
 .gamestat.result.win {
-    color: yellow;
+    /* color: #ffe400;*/ 
+	text-shadow: 5px 5px #777777;
 }
 
 .gamestat.result.loss {
     color: red;
 }
 
+.mvp {
+	color: #c5a79a;
+	margin-right: 10px;
+}
+
+.mvp-header {
+	margin: 10px 0;
+}
+.mvp-stats {
+	margin-top: 5px;
+}
+
+.mvpstat {
+	color: #71a3f8;
+	margin: 0 5px;
+}
+
 .achievement-icon {
     width: 40px;
     height: 40px;
     display: inline-block;
-    margin-right: 10px;
+    margin: 0 10px -5px 10px;
 }
 
 .cup {
@@ -49,6 +67,25 @@ body {
     position: relative;
     margin: 20px auto 0 auto;
     width: 1800px;
-    height: 700px;
+    height: 660px;
     border: 1px solid white;
+}
+
+.local-leaderboard {
+	width: 100%;
+	font-size: 16px;
+	border: 7px solid transparent;
+	border-collapse: none;
+	color: lightblue;
+}
+
+.local-leaderboard tr {
+	border: 10px solid transparent !important;	
+	background-clip: padding-box;
+}
+
+.local-leaderboard td {
+	border: 1px solid transparent;	
+	background-color: #0d3041;
+	background-clip: padding-box;
 }
