@@ -63,7 +63,7 @@ export class LeaderBoards extends Component {
 				{[...Array(30)].map((playerPlace, playerIndex) => 
 					<tr key={playerIndex + 1}>{
 						leaderboards.map((leaderboard) => <>
-							<td>{playerIndex + 1}</td>
+							<td class="rank">{playerIndex + 1}</td>
 							{leaderboard.players.length > playerIndex ? (
 									<>
 										<td class="playerName">{leaderboard.players[playerIndex].name}</td>
@@ -105,7 +105,7 @@ export class LeaderBoards extends Component {
 					<tr key={playerIndex + 1}>{
 						indexArray.map((i) => 
 							<>
-								<td>{playerIndex + 1}</td>
+								<td class="rank">{playerIndex + 1}</td>
 								{leaderboards[i].players.length > playerIndex ? (
 									<>
 										<td class="global-rank">

@@ -70,7 +70,7 @@ body {
 .leaderboard {
     margin: 20px auto 0 auto;
     width: 1800px;
-    border: 1px solid white;
+    border: 1px solid #c5a79a;
 }
 
 .game-leaderboard {
@@ -83,26 +83,30 @@ body {
 
 .leaderboards-table {
 	width: 100%;
+	height: 100%;
 	font-size: 16px;
-	border: 7px solid transparent;
-	border-collapse: none;
+	border: 1px solid #c5a79a;
+	border-collapse: collapse;
 	color: lightblue;
 }
 
 .leaderboards-table tr {
-	border: 10px solid transparent !important;	
+	/*border: 10px solid transparent !important;	*/
 	background-clip: padding-box;
+	border-bottom: 5px solid transparent;	
 }
 
 .leaderboards-table th {
 	color: white;
+	border: 1px solid #c5a79a !important;
 }
 
 .leaderboards-table td {
-	border: 1px solid transparent;	
+	/*border-left: 5px solid transparent;	*/
 	background-color: #0d3041;
 	background-clip: padding-box;
 	overflow: hidden;
+	border-left: 1px solid transparent;
 }
 
 .leaderboards-table td.playerName{
@@ -110,6 +114,11 @@ body {
 	max-width: 250px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+.leaderboards-table td.rank { 
+	border-left-color: #c5a79a !important;
+	padding: 0 5px;
 }
 
 .leaderboards-table td.global-rank {
