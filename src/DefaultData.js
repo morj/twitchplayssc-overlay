@@ -103,7 +103,7 @@ export class DefaultData {
 					workers: 12
 				}
 			},
-			leaderboards: [
+			gameleaderboards: [
 				exampleLeaderBoard,
 				exampleLeaderBoard2,
 				exampleLeaderBoard2,
@@ -114,14 +114,14 @@ export class DefaultData {
 				exampleLeaderBoard
 			],
 			globalLeaderboards: [
-				exampleLeaderBoard,
-				exampleLeaderBoard,
-				exampleLeaderBoard,
-				exampleLeaderBoard,
-				exampleLeaderBoard,
-				exampleLeaderBoard,
-				exampleLeaderBoard,
-				exampleLeaderBoard
+				exampleLeaderBoard2,
+				exampleLeaderBoard2,
+				exampleLeaderBoard2,
+				exampleLeaderBoard2,
+				exampleLeaderBoard2,
+				exampleLeaderBoard2,
+				exampleLeaderBoard2,
+				exampleLeaderBoard2
 			]
         };
     }

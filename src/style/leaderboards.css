@@ -63,6 +63,10 @@ body {
     background-size: 40px 40px;
 }
 
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+
 .fullmode-leaderboards {
     position: relative;
     margin: 20px auto 0 auto;
@@ -71,7 +75,7 @@ body {
     border: 1px solid white;
 }
 
-.local-leaderboard {
+.leaderboards-table {
 	width: 100%;
 	font-size: 16px;
 	border: 7px solid transparent;
@@ -79,13 +83,66 @@ body {
 	color: lightblue;
 }
 
-.local-leaderboard tr {
+.leaderboards-table tr {
 	border: 10px solid transparent !important;	
 	background-clip: padding-box;
 }
 
-.local-leaderboard td {
+.leaderboards-table td {
 	border: 1px solid transparent;	
 	background-color: #0d3041;
 	background-clip: padding-box;
+}
+
+/*------------------------------------------------------*/
+/*---------------ANIMATION------------------------------*/
+/*------------------------------------------------------*/
+
+.leaderboards-table.local {
+	animation: 30s fadeOut;
+	animation-iteration-count:infinite;
+}
+
+.leaderboards-table.global {
+	position: relative;
+	top: -650px;
+	opacity: 0;
+	animation: 30s fadeIn;
+	animation-iteration-count:infinite;
+}
+
+@keyframes fadeIn {
+	40% {
+        opacity: 0;
+    }
+	
+	50% {
+        opacity: 1;
+    }
+	
+    90% {
+        opacity: 1;
+    }
+	
+	100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+	40% {
+        opacity: 1;
+    }
+
+	50% {
+        opacity: 0;
+    }
+	
+    90% {
+        opacity: 0;
+    }
+	
+	100% {
+        opacity: 1;
+    }
 }

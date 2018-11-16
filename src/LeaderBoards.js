@@ -38,30 +38,32 @@ export class LeaderBoards extends Component {
 					</div>	
 					
                     <div className="fullmode-leaderboards">
-						{this.renderLeaderboards(state.leaderboards)}
+						{this.renderLeaderboards(state.gameleaderboards, 'this game')}
+						{this.renderLeaderboards(state.globalLeaderboards, 'global')}
                     </div>
                 </div>
             </div>
         );
     }
 	
-	renderLeaderboards(leaderboards)
+	renderLeaderboards(leaderboards, name)
 	{
+		let tableClass = (name == 'global' ? 'global' : 'local');
 		return (
-			<table class="local-leaderboard">
-				{this.renderSomeLeaderboards(leaderboards, [0, 1, 2, 3])}
-				{this.renderSomeLeaderboards(leaderboards, [4, 5, 6, 7])}
+			<table class={"leaderboards-table " + tableClass}>
+				{this.renderSomeLeaderboards(leaderboards, [0, 1, 2, 3], name)}
+				{this.renderSomeLeaderboards(leaderboards, [4, 5, 6, 7], name)}
 			</table>
 		);
 	}
 	
-	renderSomeLeaderboards(leaderboards, indexArray)
+	renderSomeLeaderboards(leaderboards, indexArray, name)
 	{
 		return (
 			<>
 				<tr>
 					{indexArray.map((i) => 
-						<th colspan="3">{leaderboards[i].title}</th>
+					<th colspan="3">{leaderboards[i].title + ' '}({name})</th>
 					)}
 				</tr>
 				{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((playerPlace, playerIndex) => 
