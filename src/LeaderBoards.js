@@ -32,8 +32,7 @@ export class LeaderBoards extends Component {
                             className="mvpstat">{state.mvp.mined.minerals}</span> minerals,
                             <span className="mvpstat">{state.mvp.mined.gas}</span> gas mined — <span
                             className="mvpstat">{state.mvp.killed.workers}</span> workers
-                            killed — <span className="achievement-icon cup"/>
-                            <span className="achievement-icon cup"/>
+                            killed
                         </div>
 					</div>	
 					
