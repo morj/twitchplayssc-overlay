@@ -133,11 +133,11 @@ export class LeaderBoards extends Component {
 	
 	climbToString(climb)
 	{
-		return (climb > 0 ? '+' : '') + (climb == 0 ? '-' : climb);
+		return (climb > 0 ? '+' : '') + (climb === 0 ? '-' : climb);
 	}
 	
 	getClimbClass(climb)
 	{
-		return 'climb ' + (climb > 0 ? 'raise' : (climb == 0 ? '' : 'drop'))
+		return 'climb ' + (climb > 0 ? 'raise' : (climb === 0 ? '' : 'drop'))
 	}
 }
