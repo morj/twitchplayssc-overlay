@@ -70,7 +70,7 @@ export class LeaderBoards extends Component {
 					<tr key={playerIndex}>{
 						indexArray.map((i) => <>
 							<td>{playerPlace}</td>
-							<td>{leaderboards[i].players[playerIndex].name}</td>
+							<td class="playerName">{leaderboards[i].players[playerIndex].name}</td>
 							<td>{leaderboards[i].players[playerIndex].value}</td>
 						</>)
 					}</tr>

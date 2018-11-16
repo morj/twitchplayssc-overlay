@@ -75,7 +75,7 @@ export class DefaultData {
 				{name: 'superlongplayername5', value: 23},
 				{name: 'superlongplayername6', value: 23},
 				{name: 'superlongplayername7', value: 23},
-				{name: 'superlongplayername8', value: 23},
+				{name: 'superlongplayeasdasdasdasdasdrname8', value: 23},
 				{name: 'superlongplayername9', value: 23},
 				{name: 'superlongplayername10', value: 23}
 			]
