@@ -88,6 +88,7 @@ export class DefaultData {
             mode: 'leaderboards',
 			data: [{text: 'Chat'}], /* kill me */
 			game: {
+				result: 'victory',
 				map: 'Amazing Map',
 				opponent: 'Cheater 3',
 				duration: '123 min 15 sec'

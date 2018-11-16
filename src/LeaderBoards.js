@@ -17,7 +17,7 @@ export class LeaderBoards extends Component {
 
                     <div className="fullmode-gamestats">
                         <span className="gamestat map">{state.game.map}</span> — <span className="gamestat ailevel">{state.game.opponent}</span> — <span className="gamestat duration">{state.game.duration}</span>
-                        <span className="gamestat result win">VICTORY</span>
+                        <span className="gamestat result win">{state.game.result.toUpperCase()}</span>
                     </div>
 
                     <div className="mvp-container">
