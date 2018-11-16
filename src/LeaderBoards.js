@@ -47,7 +47,7 @@ export class LeaderBoards extends Component {
 	
 	renderLeaderboards(leaderboards, name)
 	{
-		let tableClass = (name == 'global' ? 'global' : 'local');
+		let tableClass = (name === 'global' ? 'global' : 'local');
 		return (
 			<table class={"leaderboards-table " + tableClass}>
 				{this.renderSomeLeaderboards(leaderboards, [0, 1, 2, 3], name)}
