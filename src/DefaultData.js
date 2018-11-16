@@ -68,21 +68,21 @@ export class DefaultData {
 		let exampleLeaderBoard = {
 			title: 'XP',
 			players: [
-				{name: 'superlongplayername1', value: 100500},
-				{name: 'superlongplayername2', value: 23},
-				{name: 'superlongplayername3', value: 23},
-				{name: 'superlongplayername4', value: 23},
-				{name: 'superlongplayername5', value: 23},
-				{name: 'superlongplayername6', value: 23},
-				{name: 'superlongplayername7', value: 23},
-				{name: 'superlongplayeasdasdasdasdasdrname8', value: 23},
-				{name: 'superlongplayername9', value: 23},
-				{name: 'superlongplayername10', value: 23}
+				{name: 'superlongplayeasd asdasdasdasdrname8', value: 100500, climb: 1},
+				{name: 'superlongplayername2', value: 23, climb: 0},
+				{name: 'superlongplayername3', value: 23, climb: 10},
+				{name: 'superlongplayername4', value: 23, climb: -2},
+				{name: 'superlongplayername5', value: 23, climb: 0},
+				{name: 'superlongplayername6', value: 23, climb: 1},
+				{name: 'superlongplayername7', value: 23, climb: -1},
+				{name: 'superlongplayeasdasdasdasdasdrname8', value: 23, climb: 0},
+				{name: 'superlongplayername9', value: 23, climb: 2},
+				{name: 'superlongplayername10', value: 23, climb: 0}
 			]
 		};
 		
 		let exampleLeaderBoard2 = JSON.parse(JSON.stringify(exampleLeaderBoard)); // cloned
-		exampleLeaderBoard2.players[0].value = 111111;
+		exampleLeaderBoard2.players[0].value = 88888888;
 		
 		this.debugLeaderboards = {
             mode: 'leaderboards',

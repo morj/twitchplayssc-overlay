@@ -62,13 +62,15 @@ export class LeaderBoards extends Component {
 			<>
 				<tr>
 					{indexArray.map((i) => 
-					<th colspan="3">{leaderboards[i].title + ' '}({name})</th>
+					<th colspan="4">{leaderboards[i].title + ' '}({name})</th>
 					)}
 				</tr>
 				{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((playerPlace, playerIndex) => 
 					<tr key={playerIndex}>{
 						indexArray.map((i) => <>
 							<td>{playerPlace}</td>
+							<td className={this.getClimbClass(leaderboards[i].players[playerIndex].climb)}>
+							{this.climbToString(leaderboards[i].players[playerIndex].climb)}</td>
 							<td class="playerName">{leaderboards[i].players[playerIndex].name}</td>
 							<td>{leaderboards[i].players[playerIndex].value}</td>
 						</>)
@@ -76,5 +78,15 @@ export class LeaderBoards extends Component {
 				)}
 			</>
 		);
+	}
+	
+	climbToString(climb)
+	{
+		return (climb > 0 ? '+' : '') + (climb == 0 ? '-' : climb);
+	}
+	
+	getClimbClass(climb)
+	{
+		return 'climb ' + (climb > 0 ? 'raise' : (climb == 0 ? '' : 'drop'))
 	}
 }
