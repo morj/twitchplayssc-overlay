@@ -84,16 +84,22 @@ export class DefaultData {
 		let someGlobalLeaderBoard = {
 			title: 'Last week',
 			players: [
-				{name: 'superlo ngplayeasd asdasdasdasdrname8', value: 100500},
-				{name: 'superlongplayername2', value: 23},{name: 'superlongplayername7', value: 23},
-				{name: 'supe rlongplayername3', value: 23},{name: 'superlongplayername7', value: 23},
-				{name: 'superlongplayername4', value: 23},{name: 'superlongplayername7', value: 23},
-				{name: 'sup erlongplayername5', value: 23},{name: 'superlongplayername7', value: 23},
-				{name: 'superlongplayername6', value: 23},{name: 'superlongplayername7', value: 23},
-				{name: 'superlongplayername7', value: 23},{name: 'superlongplayername7', value: 23},
-				{name: 'superlongplayeasdasdasdasdasdrname8', value: 23},
-				{name: 'superlongplayername9', value: 23, climb: 2},
-				{name: 'superlongplayername10', value: 23, climb: 0}
+				{name: 'superlo ngplayeasd asdasdasdasdrname8', value: 100500, climb: 10, globalRank: 3},
+				{name: 'superlongplayername2', value: 23, climb: 10, globalRank: 3, highlight: true},
+				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
+				{name: 'supe rlongplayername3', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayername4', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
+				{name: 'sup erlongplayername5', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3, highlight: true},
+				{name: 'superlongplayername6', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayeasdasdasdasdasdrname8', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayername9', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayername10', value: 23, climb: 10, globalRank: 3}
 			]
 		};
 		

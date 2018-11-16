@@ -57,20 +57,32 @@ export class LeaderBoards extends Component {
 			<table class="leaderboards-table global">
 				<tr>
 					{leaderboards.map((leaderboard) => 
-					<th colspan="3">{leaderboard.title + ' '}</th>
+					<th colspan="4">{leaderboard.title + ' '}</th>
 					)}
 				</tr>
 				{[...Array(30)].map((playerPlace, playerIndex) => 
 					<tr key={playerIndex + 1}>{
 						leaderboards.map((leaderboard) => <>
-							<td class="rank">{playerIndex + 1}</td>
 							{leaderboard.players.length > playerIndex ? (
-									<>
-										<td class="playerName">{leaderboard.players[playerIndex].name}</td>
-										<td>{leaderboard.players[playerIndex].value}</td>
+								<>
+										<td class={this.highlightClass(leaderboard.players[playerIndex], 'rank')}>
+											{playerIndex + 1}
+										</td>
+										<td class={this.highlightClass(leaderboard.players[playerIndex], 'global-rank')}>
+											#{leaderboard.players[playerIndex].globalRank}&nbsp;
+											(<span className={this.getClimbClass(leaderboard.players[playerIndex].climb)}>{this.climbToString(leaderboard.players[playerIndex].climb)}</span>)
+										</td>
+										<td class={this.highlightClass(leaderboard.players[playerIndex], 'playerName')}>
+											{leaderboard.players[playerIndex].name}
+										</td>
+										<td class={this.highlightClass(leaderboard.players[playerIndex], '')}>
+											{leaderboard.players[playerIndex].value}
+										</td>
 									</>
 								) : (
 									<>
+										<td class="rank">{playerIndex + 1}</td>
+										<td></td>
 										<td></td>
 										<td></td>
 									</>
@@ -80,6 +92,11 @@ export class LeaderBoards extends Component {
 				)}
 			</table>
 		);
+	}
+	
+	highlightClass(player, clazz)
+	{
+		return clazz + (player.highlight ? ' player-highlight' : '');
 	}
 	
 	renderLocalLeaderboards(leaderboards)

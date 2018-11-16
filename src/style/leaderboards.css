@@ -116,6 +116,11 @@ body {
 	white-space: nowrap;
 }
 
+.leaderboards-table td.player-highlight {
+	background-color: #186b94;
+	font-weight: bold;
+}
+
 .leaderboards-table td.rank { 
 	border-left-color: #c5a79a !important;
 	padding: 0 5px;
