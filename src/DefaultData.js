@@ -19,7 +19,7 @@ export class DefaultData {
         };
         // noinspection JSUnusedGlobalSymbols
         this.debug = {
-            mode: 'leaderboards',
+            mode: 'compact',
             stats: {apm: 555, players: 555, gamesWon: 1024, gamesLost: 1024, aiLevel: 'Cheater 3'},
             data: [{text: 'Chat'}],
             playerStats: {
@@ -63,6 +63,66 @@ export class DefaultData {
             staticNote: {
                 text: 'NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page'
             }
+        };
+		
+		let exampleLeaderBoard = {
+			title: 'XP',
+			players: [
+				{name: 'superlongplayername1', value: 100500},
+				{name: 'superlongplayername2', value: 23},
+				{name: 'superlongplayername3', value: 23},
+				{name: 'superlongplayername4', value: 23},
+				{name: 'superlongplayername5', value: 23},
+				{name: 'superlongplayername6', value: 23},
+				{name: 'superlongplayername7', value: 23},
+				{name: 'superlongplayername8', value: 23},
+				{name: 'superlongplayername9', value: 23},
+				{name: 'superlongplayername10', value: 23}
+			]
+		};
+		
+		let exampleLeaderBoard2 = JSON.parse(JSON.stringify(exampleLeaderBoard)); // cloned
+		exampleLeaderBoard2.players[0].value = 111111;
+		
+		this.debugLeaderboards = {
+            mode: 'leaderboards',
+			data: [{text: 'Chat'}], /* kill me */
+			game: {
+				map: 'Amazing Map',
+				opponent: 'Cheater 3',
+				duration: '123 min 15 sec'
+			},
+			mvp: {
+				player: 'Tinydick',
+				mined: {
+					minerals: 51234,
+					gas: 12389
+				},
+				killed: {
+					units: 69,
+					workers: 12
+				}
+			},
+			leaderboards: [
+				exampleLeaderBoard,
+				exampleLeaderBoard2,
+				exampleLeaderBoard2,
+				exampleLeaderBoard,
+				exampleLeaderBoard,
+				exampleLeaderBoard2,
+				exampleLeaderBoard,
+				exampleLeaderBoard
+			],
+			globalLeaderboards: [
+				exampleLeaderBoard,
+				exampleLeaderBoard,
+				exampleLeaderBoard,
+				exampleLeaderBoard,
+				exampleLeaderBoard,
+				exampleLeaderBoard,
+				exampleLeaderBoard,
+				exampleLeaderBoard
+			]
         };
     }
 }
