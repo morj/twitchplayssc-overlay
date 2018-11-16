@@ -97,16 +97,21 @@ body {
 
 .leaderboards-table td.playerName{
 	text-align: left;
-	max-width: 220px;
+	max-width: 250px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
-.leaderboards-table td.climb.raise {
+.leaderboards-table td.global-rank {
+	text-align: left;
+	white-space: nowrap;
+}
+
+.leaderboards-table .climb.raise {
 	color: lightgreen;
 }
 
-.leaderboards-table td.climb.drop {
+.leaderboards-table .climb.drop {
 	color: red;
 }
 

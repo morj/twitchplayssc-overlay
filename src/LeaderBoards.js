@@ -50,8 +50,8 @@ export class LeaderBoards extends Component {
 		let tableClass = (name === 'global' ? 'global' : 'local');
 		return (
 			<table class={"leaderboards-table " + tableClass}>
-				{this.renderSomeLeaderboards(leaderboards, [0, 1, 2, 3], name)}
-				{this.renderSomeLeaderboards(leaderboards, [4, 5, 6, 7], name)}
+				{this.renderSomeLeaderboards(leaderboards, [0, 1, 2], name)}
+				{this.renderSomeLeaderboards(leaderboards, [3, 4, 5], name)}
 			</table>
 		);
 	}
@@ -69,8 +69,9 @@ export class LeaderBoards extends Component {
 					<tr key={playerIndex}>{
 						indexArray.map((i) => <>
 							<td>{playerPlace}</td>
-							<td className={this.getClimbClass(leaderboards[i].players[playerIndex].climb)}>
-							{this.climbToString(leaderboards[i].players[playerIndex].climb)}</td>
+							<td class="global-rank">
+								#{leaderboards[i].players[playerIndex].globalRank}&nbsp;
+							(<span className={this.getClimbClass(leaderboards[i].players[playerIndex].climb)}>{this.climbToString(leaderboards[i].players[playerIndex].climb)}</span>)</td>
 							<td class="playerName">{leaderboards[i].players[playerIndex].name}</td>
 							<td>{leaderboards[i].players[playerIndex].value}</td>
 						</>)

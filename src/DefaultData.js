@@ -68,16 +68,16 @@ export class DefaultData {
 		let exampleLeaderBoard = {
 			title: 'XP',
 			players: [
-				{name: 'superlongplayeasd asdasdasdasdrname8', value: 100500, climb: 1},
-				{name: 'superlongplayername2', value: 23, climb: 0},
-				{name: 'superlongplayername3', value: 23, climb: 10},
-				{name: 'superlongplayername4', value: 23, climb: -2},
-				{name: 'superlongplayername5', value: 23, climb: 0},
-				{name: 'superlongplayername6', value: 23, climb: 1},
-				{name: 'superlongplayername7', value: 23, climb: -1},
-				{name: 'superlongplayeasdasdasdasdasdrname8', value: 23, climb: 0},
-				{name: 'superlongplayername9', value: 23, climb: 2},
-				{name: 'superlongplayername10', value: 23, climb: 0}
+				{name: 'superlo ngplayeasd asdasdasdasdrname8', value: 100500, climb: 2999, globalRank: 3400},
+				{name: 'superlongplayername2', value: 23, climb: 0, globalRank: 1000},
+				{name: 'supe rlongplayername3', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayername4', value: 23, climb: -2, globalRank: 1},
+				{name: 'sup erlongplayername5', value: 23, climb: 0, globalRank: 3},
+				{name: 'superlongplayername6', value: 23, climb: 1, globalRank: 4},
+				{name: 'superlongplayername7', value: 23, climb: -1, globalRank: 5},
+				{name: 'superlongplayeasdasdasdasdasdrname8', value: 23, climb: 0, globalRank: 7},
+				{name: 'superlongplayername9', value: 23, climb: 2, globalRank: 100},
+				{name: 'superlongplayername10', value: 23, climb: 0, globalRank: 34}
 			]
 		};
 		
@@ -110,9 +110,7 @@ export class DefaultData {
 				exampleLeaderBoard2,
 				exampleLeaderBoard,
 				exampleLeaderBoard,
-				exampleLeaderBoard2,
-				exampleLeaderBoard,
-				exampleLeaderBoard
+				exampleLeaderBoard2
 			],
 			globalLeaderboards: [
 				exampleLeaderBoard2,
