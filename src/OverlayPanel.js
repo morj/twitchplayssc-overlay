@@ -92,7 +92,7 @@ export class OverlayPanel extends Component {
                         </tr>
                         <tr>
                             {this.upgrades('armor-ground', 'armor-air')}
-                            {this.researches('stalker', 'prism', 'carrier')}
+                            {this.researches('stalker', 'prism'/*, 'carrier'*/)}
                             <td/>
                             <td/>
                         </tr>
