@@ -57,7 +57,7 @@ export class LeaderBoards extends Component {
 			<table class="leaderboards-table global">
 				<tr>
 					{leaderboards.map((leaderboard) => 
-					<th colspan="4">{leaderboard.title + ' '}</th>
+					<th colspan="3">{leaderboard.title + ' '}</th>
 					)}
 				</tr>
 				{[...Array(30)].map((playerPlace, playerIndex) => 
@@ -66,10 +66,7 @@ export class LeaderBoards extends Component {
 							{leaderboard.players.length > playerIndex ? (
 								<>
 										<td class={this.highlightClass(leaderboard.players[playerIndex], 'rank')}>
-											{playerIndex + 1}
-										</td>
-										<td class={this.highlightClass(leaderboard.players[playerIndex], 'global-rank')}>
-											#{leaderboard.players[playerIndex].globalRank}&nbsp;
+											{playerIndex + 1}&nbsp;
 											(<span className={this.getClimbClass(leaderboard.players[playerIndex].climb)}>{this.climbToString(leaderboard.players[playerIndex].climb)}</span>)
 										</td>
 										<td class={this.highlightClass(leaderboard.players[playerIndex], 'playerName')}>
@@ -82,7 +79,6 @@ export class LeaderBoards extends Component {
 								) : (
 									<>
 										<td class="rank">{playerIndex + 1}</td>
-										<td></td>
 										<td></td>
 										<td></td>
 									</>

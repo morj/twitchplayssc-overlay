@@ -87,7 +87,7 @@ export class DefaultData {
 				{name: 'superlo ngplayeasd asdasdasdasdrname8', value: 100500, climb: 10, globalRank: 3},
 				{name: 'superlongplayername2', value: 23, climb: 10, globalRank: 3, highlight: true},
 				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
-				{name: 'supe rlongplayername3', value: 23, climb: 10, globalRank: 3},
+				{name: 'supe rlongplayername3', value: 23, climb: 0, globalRank: 3},
 				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
 				{name: 'superlongplayername4', value: 23, climb: 10, globalRank: 3},
 				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
