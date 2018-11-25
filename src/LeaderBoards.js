@@ -27,13 +27,6 @@ export class LeaderBoards extends Component {
 								<span className="playername">{state.mvp.player}</span>
 								<span className="achievement-icon cup"/>
 							</div>
-							<div className="mvp-stats">
-								<span className="mvpstat">{state.mvp.killed.units}</span> units killed — <span
-								className="mvpstat">{state.mvp.mined.minerals}</span> minerals,
-								<span className="mvpstat">{state.mvp.mined.gas}</span> gas mined — <span
-								className="mvpstat">{state.mvp.killed.workers}</span> workers
-								killed
-							</div>
 						</div>	
 						
 						<div className="game-leaderboard leaderboard">
