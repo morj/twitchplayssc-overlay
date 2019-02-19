@@ -65,7 +65,7 @@ export class LeaderBoards extends Component {
 										<td class={this.highlightClass(leaderboard.players[playerIndex], 'playerName')}>
 											{leaderboard.players[playerIndex].name}
 										</td>
-										<td class={this.highlightClass(leaderboard.players[playerIndex], '')}>
+										<td class={'value ' + this.highlightClass(leaderboard.players[playerIndex], '')}>
 											{leaderboard.players[playerIndex].value}
 										</td>
 									</>
@@ -119,7 +119,7 @@ export class LeaderBoards extends Component {
 											(<span className={this.getClimbClass(leaderboards[i].players[playerIndex].climb)}>{this.climbToString(leaderboards[i].players[playerIndex].climb)}</span>)
 										</td>
 										<td class="playerName">{leaderboards[i].players[playerIndex].name}</td>
-										<td>{leaderboards[i].players[playerIndex].value}</td>
+										<td class="value">{leaderboards[i].players[playerIndex].value}</td>
 									</>
 								) : (
 									<>

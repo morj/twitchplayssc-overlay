@@ -69,7 +69,7 @@ export class DefaultData {
 			title: 'XP',
 			players: [
 				{name: 'superlo ngplayeasd asdasdasdasdrname8', value: 100500, climb: 2999, globalRank: 3400},
-				{name: 'superlongplayername2', value: 23, climb: 0, globalRank: 1000},
+				{name: 'superlongplayername2', value: 111111, climb: 0, globalRank: 1000},
 				{name: 'supe rlongplayername3', value: 23, climb: 10, globalRank: 3},
 				{name: 'superlongplayername4', value: 23, climb: -2, globalRank: 1},
 				{name: 'sup erlongplayername5', value: 23, climb: 0, globalRank: 3},
@@ -85,7 +85,7 @@ export class DefaultData {
 			title: 'Last week',
 			players: [
 				{name: 'superlo ngplayeasd asdasdasdasdrname8', value: 100500, climb: 10, globalRank: 3},
-				{name: 'superlongplayername2', value: 23, climb: 10, globalRank: 3, highlight: true},
+				{name: 'superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
 				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
 				{name: 'supe rlongplayername3', value: 23, climb: 0, globalRank: 3},
 				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
@@ -96,7 +96,7 @@ export class DefaultData {
 				{name: 'superlongplayername6', value: 23, climb: 10, globalRank: 3},
 				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
 				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
-				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
+				{name: 'superlongplayername7', value: 1111111, climb: 10, globalRank: 3},
 				{name: 'superlongplayeasdasdasdasdasdrname8', value: 23, climb: 10, globalRank: 3},
 				{name: 'superlongplayername9', value: 23, climb: 10, globalRank: 3},
 				{name: 'superlongplayername10', value: 23, climb: 10, globalRank: 3}
