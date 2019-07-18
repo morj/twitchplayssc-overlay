@@ -1,1 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Reporting bugs
+
+Please, report only specific bugs in UI overlay (like font glitches), feature suggestions go to the main https://github.com/twitchplayssc/twitchplayssc repo
