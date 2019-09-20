@@ -110,20 +110,30 @@ export class OverlayPanel extends Component {
                         </tbody>
                     </table>
                 </div>
-                {state.topDonations && state.topDonations.enabled && <div className="sub-panel">
+                {state.supporters && state.supporters.topDonations && state.supporters.topDonations.enabled && <div id="donations-panel" className="supporter-panel">
                     <div className="text-warn table-title">top donations</div>
-                    <table className="sub-table">
+                    <table className="supporter-table">
                         <tbody>
                         {['month', 'today', 'latest'].map((period, i) => <tr key={i}>
-                            <td className="sub-table-key text-header">{period}:</td>
-                            <td className="sub-table-value">
-                                <span className="donator">{state.topDonations[period].name}</span>
-                                <span className="donation-amount text-warn">{state.topDonations[period].amount}</span>
+                            <td className="supporter-table-key text-header">{period}:</td>
+                            <td className="supporter-table-value">
+                                <span className="donator">{state.supporters.topDonations[period].name}</span>
+                                <span className="donation-amount text-warn">{state.supporters.topDonations[period].amount}</span>
                             </td>
                         </tr>)}
                         </tbody>
                     </table>
                     <div className="text-warn table-footer">thank you for your support!</div>
+                </div>}
+                {state.supporters && state.supporters.newSubscriber && <div id="new-subscriber-panel" className="supporter-panel event-panel">
+                    <div className="text-warn table-title">new subscriber</div>
+                    <div className="event-username event-panel-row">{state.supporters.newSubscriber.name}</div>
+                    <div className="event-details event-panel-row">{state.supporters.newSubscriber.period}</div>
+                </div>}
+                {state.supporters && state.supporters.newDonation && <div id="new-donation-panel" className="supporter-panel event-panel">
+                    <div className="text-warn table-title">new donation</div>
+                    <div className="event-username event-panel-row">{state.supporters.newDonation.name}</div>
+                    <div className="event-details event-panel-row">{state.supporters.newDonation.amount}</div>
                 </div>}
                 {/*<div className="right-panel chat">{
                     state.data.map((item, index) => <div key={index} className="message">

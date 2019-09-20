@@ -10,12 +10,9 @@ export class DefaultData {
                 xpGained: [{}, {}, {}, {}, {}]
             },
             upgrades: {},
-            topDonations: {
-                enabled: false
-            },
             attentionBanner: {text: '', enabled: false},
             creepingLine: {text: '', enabled: false},
-            supporters: { recentSub: '', recentDonation: ''}
+            supporters: { recentSub: '-', recentDonation: '-', topDonations: { enabled: false }}
         };
         // noinspection JSUnusedGlobalSymbols
         this.debug = {
@@ -46,12 +43,6 @@ export class DefaultData {
                 zealot: {enabled: true, level: -1},
                 stalker: {enabled: true, level: 1}
             },
-            topDonations: {
-                enabled: true,
-                month: {name: 'TinyDick', amount: '$234'},
-                today: {name: 'YourMomma69', amount: '$239'},
-                latest: {name: 'Make Parmesan Great Again', amount: '$23'}
-            },
             attentionBanner: {
                 text: 'Maeror Tri was an ambient, noise and drone music band from Germany',
                 enabled: true
@@ -60,7 +51,24 @@ export class DefaultData {
                 text: 'Would it be possible to change the width <span style="color: red;">attribute in the to portion</span> of the keyframe the width attribute in the to portion of the keyframe',
                 enabled: true
             },
-            supporters: { recentSub: 'SgtMasterShooterPersonEliasdasdasdte88', recentDonation: 'SgtMasterShooasdasdasdterPersonElite88'}
+            supporters: {
+                recentSub: 'SgtMasterShooterPersonEliasdasdasdte88',
+                recentDonation: 'SgtMasterShooasdasdasdterPersonElite88',
+//                newSubscriber: {
+//                    name: 'ahorseinahospital',
+//                    period: '12 months'
+//                },
+                newDonation: {
+                    name: 'SgtMasterShooterPersonElite88',
+                    amount: '$123'
+                },
+                topDonations: {
+                    enabled: true,
+                    month: {name: 'TinyDick', amount: '$234'},
+                    today: {name: 'YourMomma69', amount: '$239'},
+                    latest: {name: 'Make Parmesan Great Again', amount: '$23'}
+                }
+            }
         };
 		
 		let someLocalLeaderBoard = {
