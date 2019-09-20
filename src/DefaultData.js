@@ -15,7 +15,7 @@ export class DefaultData {
             },
             attentionBanner: {text: '', enabled: false},
             creepingLine: {text: '', enabled: false},
-            staticNote: {text: 'NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page'}
+            supporters: { recentSub: '', recentDonation: ''}
         };
         // noinspection JSUnusedGlobalSymbols
         this.debug = {
@@ -60,9 +60,7 @@ export class DefaultData {
                 text: 'Would it be possible to change the width <span style="color: red;">attribute in the to portion</span> of the keyframe the width attribute in the to portion of the keyframe',
                 enabled: true
             },
-            staticNote: {
-                text: 'NOTE: If !$ or !money does not work for you, try following the channel and refreshing the page'
-            }
+            supporters: { recentSub: 'SgtMasterShooterPersonEliasdasdasdte88', recentDonation: 'SgtMasterShooasdasdasdterPersonElite88'}
         };
 		
 		let someLocalLeaderBoard = {

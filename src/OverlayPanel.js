@@ -60,7 +60,13 @@ export class OverlayPanel extends Component {
                                 <span className="value">{state.stats.aiLevel}</span>
                             </div>
                         </div>
-                        <div className="rtfm"><span className="text-warn">{state.staticNote.text}</span>
+                        <div className="supporter recent-sub">
+                            <span className="key">recent sub</span>
+                            <span className="value">{state.supporters.recentSub}</span>
+                        </div>
+                        <div className="supporter recent-donation">
+                            <span className="key">recent donation</span>
+                            <span className="value">{state.supporters.recentDonation}</span>
                         </div>
                     </div>
                     <div className="right-panel">
