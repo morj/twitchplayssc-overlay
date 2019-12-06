@@ -191,6 +191,7 @@ td.state-incomplete  .icon { filter: contrast(200%) brightness(55%); }
 .icon.r-obs{ background-image: url("../images/icons/btn-upgrade-protoss-graviticbooster.png"); }
 .icon.r-prism{ background-image: url("../images/icons/btn-upgrade-protoss-graviticdrive.png"); }
 .icon.r-carrier{ background-image: url("../images/icons/btn-upgrade-protoss-gravitoncatapult.png"); }
+.icon.r-voidray{ background-image: url("../images/icons/btn-ability-protoss-fluxvanes.png"); }
 
 
 

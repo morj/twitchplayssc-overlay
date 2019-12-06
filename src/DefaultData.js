@@ -39,6 +39,7 @@ export class DefaultData {
                 stargate: {enabled: false, quantity: 0},
                 robobay: {enabled: false},
                 robo: {enabled: true, quantity: 2},
+                voidray: {enabled: true},
                 adept: {enabled: false},
                 zealot: {enabled: true, level: -1},
                 stalker: {enabled: true, level: 1}
