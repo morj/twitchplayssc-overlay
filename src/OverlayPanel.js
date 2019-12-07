@@ -34,7 +34,7 @@ export class OverlayPanel extends Component {
             <div className="adjust-me-overlay text-regular">
                 <div className="unit-portrait-patch"/>
                 
-				<div className={'global-center-box ' + (state.gameIntro ? 'fadeIn' : 'fadeOut')}>
+				<div className={'global-center-box ' + (state.gameIntro ? '' : 'fadeOut')}>
 					{lastKnownGameIntro && <div className="game-intro">{lastKnownGameIntro.intro}</div>}
 					{lastKnownGameIntro && <div className="game-opponent">{lastKnownGameIntro.opponent}</div>}
 					{lastKnownGameIntro && <div className="game-description">{lastKnownGameIntro.description}</div>}
