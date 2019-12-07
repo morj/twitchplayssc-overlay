@@ -1,5 +1,5 @@
 .fadeOut{
-    opacity:0;
+    opacity:0 !important;
     -webkit-transition: opacity 3s;
 }
 
