@@ -27,10 +27,19 @@ export class OverlayPanel extends Component {
 				}
 			}
 		`;
-
-        return (
+		
+		const lastKnownGameIntro = state.gameIntro ? state.gameIntro : state.lastKnownGameIntro;
+		
+		return (
             <div className="adjust-me-overlay text-regular">
                 <div className="unit-portrait-patch"/>
+                
+				<div className={'global-center-box ' + (state.gameIntro ? 'fadeIn' : 'fadeOut')}>
+					{lastKnownGameIntro && <div className="game-intro">{lastKnownGameIntro.intro}</div>}
+					{lastKnownGameIntro && <div className="game-opponent">{lastKnownGameIntro.opponent}</div>}
+					{lastKnownGameIntro && <div className="game-description">{lastKnownGameIntro.description}</div>}
+				</div>
+
                 {state.attentionBanner && state.attentionBanner.enabled &&
                 <div className="global-important-message">{state.attentionBanner.text}</div>}
                 <div className="main-panel">

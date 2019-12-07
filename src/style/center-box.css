@@ -1,0 +1,50 @@
+.fadeOut{
+    opacity:0;
+    -webkit-transition: opacity 3s;
+}
+
+.fadeIn{
+    opacity:0.7;
+    -webkit-transition: opacity 3s;
+}
+
+.global-center-box {
+	position: absolute;
+    width: 59.6%;
+    height: 48%;
+    background-color: black;
+	top: 17%;
+	left: 19.2%;
+	border: 5px solid #71a3f8;
+	font-family: "Michroma";
+	z-index: -1000;
+}
+
+.global-center-box > .game-intro {
+	display: inline-block;
+	width: 50%;
+	height: 20%;
+	margin-left: 25%;
+	margin-top: 7.5%;
+	font-size: 36px;
+	text-align: center;
+}
+
+.global-center-box > .game-opponent {
+	display: inline-block;
+	width: 50%;
+	height: 30%;
+	margin-left: 25%;
+	font-size: 70px;
+	text-align: center;
+	color: #b9936f;
+}
+
+.global-center-box > .game-description {
+	display: inline-block;
+	width: 70%;
+	height: 30%;
+	margin-left: 15%;
+	font-size: 24px;
+	text-align: center;
+}

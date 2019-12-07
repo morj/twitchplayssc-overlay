@@ -19,6 +19,11 @@ export class DefaultData {
             mode: 'compact',
             stats: {apm: 555, players: 555, gamesWon: 1024, gamesLost: 1024, aiLevel: 'Cheater 3'},
             data: [{text: 'Chat'}],
+            gameIntro: {
+                intro: 'Hot game against',
+                opponent: 'Hard AI',
+                description: 'Destroy all enemy structures, set yourself on fire and dance a mean round of polka?'
+            },
             playerStats: {
                 topUnitsKilled: [{name: 'super long playername', count: 140}, {
                     name: 'super long playername',
