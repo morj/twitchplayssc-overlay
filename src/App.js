@@ -24,11 +24,6 @@ class App extends Component {
         data.push(added);
         this.setState(Object.assign(this.state, {data: data}));
     };
-
-	setState(state) {
-		state.lastKnownGameIntro = state.gameIntro ? state.gameIntro : this.state.gameIntro; // hack, morj pls halp
-		super.setState(state);
-	}; 
 	
     componentDidMount() {
         const app = this;
