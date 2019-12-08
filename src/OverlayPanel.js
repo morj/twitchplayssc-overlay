@@ -73,7 +73,7 @@ export class OverlayPanel extends Component {
                             <span className="value">{state.supporters.recentSub}</span>
                         </div>
                         <div className="supporter recent-donation">
-                            <span className="key">recent donation</span>
+                            <span className="key">recent donations</span>
                             <span className="value">{state.supporters.recentDonation}</span>
                         </div>
                     </div>
