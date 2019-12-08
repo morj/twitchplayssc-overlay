@@ -92,6 +92,7 @@ body {
 	border: 1px solid #c5a79a;
 	border-collapse: collapse;
 	color: lightblue;
+	background-color: #0a212c;
 }
 
 .leaderboards-table tr {
