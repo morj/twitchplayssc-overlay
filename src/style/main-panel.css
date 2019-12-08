@@ -61,7 +61,7 @@
 .supporter > .value {
     display: inline-block;
     font-size: 22px;
-    color: #b9936f;
+    color: black;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
