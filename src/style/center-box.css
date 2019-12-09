@@ -23,9 +23,9 @@
 
 .global-center-box > .game-intro {
 	display: inline-block;
-	width: 50%;
+	width: 70%;
 	height: 20%;
-	margin-left: 25%;
+	margin-left: 15%;
 	margin-top: 7.5%;
 	font-size: 36px;
 	text-align: center;
@@ -33,9 +33,8 @@
 
 .global-center-box > .game-opponent {
 	display: inline-block;
-	width: 50%;
+	width: 100%;
 	height: 30%;
-	margin-left: 25%;
 	font-size: 70px;
 	text-align: center;
 	color: #b9936f;
