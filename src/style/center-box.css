@@ -1,11 +1,11 @@
 .fadeOut{
     opacity:0 !important;
-    -webkit-transition: opacity 3s;
+    -webkit-transition: opacity 1s;
 }
 
 .fadeIn{
     opacity:0.7;
-    -webkit-transition: opacity 3s;
+    -webkit-transition: opacity 1s;
 }
 
 .global-center-box {
