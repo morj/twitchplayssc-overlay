@@ -43,13 +43,13 @@ export class OverlayPanel extends Component {
                 <div className="global-important-message">{state.attentionBanner.text}</div>}
                 <div className="main-panel">
                     <div className="left-panel">
-                        {state.creepingLine && state.creepingLine.enabled &&
                         <div className="creeping-line">
                             <style dangerouslySetInnerHTML={{__html: animationRules}}/>
+                            {state.creepingLine && state.creepingLine.enabled &&
                             <div className="text" style={creepingTextStyle}
                                  dangerouslySetInnerHTML={{__html: state.creepingLine.text}}>
-                            </div>
-                        </div>}
+                            </div>}
+                        </div>
                         <div className="stats">
                             <div className="stat-block small">
                                 <span className="key">players</span>
