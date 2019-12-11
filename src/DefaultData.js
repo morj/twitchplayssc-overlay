@@ -56,24 +56,6 @@ export class DefaultData {
             creepingLine: {
                 text: 'Would it be possible to change the width <span style="color: red;">attribute in the to portion</span> of the keyframe the width attribute in the to portion of the keyframe',
                 enabled: true
-            },
-            supporters: {
-                recentSub: 'SgtMasterShooterPersonEliasdasdasdte88',
-                recentDonation: 'SgtMasterShooasdasdasdterPersonElite88',
-//                newSubscriber: {
-//                    name: 'ahorseinahospital',
-//                    period: '12 months'
-//                },
-                newDonation: {
-                    name: 'SgtMasterShooterPersonElite88',
-                    amount: '$123'
-                },
-                topDonations: {
-                    enabled: true,
-                    month: {name: 'TinyDick', amount: '$234'},
-                    today: {name: 'YourMomma69', amount: '$239'},
-                    latest: {name: 'Make Parmesan Great Again', amount: '$23'}
-                }
             }
         };
 		
