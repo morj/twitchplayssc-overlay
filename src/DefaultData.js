@@ -12,7 +12,7 @@ export class DefaultData {
             upgrades: {},
             attentionBanner: {text: '', enabled: false},
             creepingLine: {text: '', enabled: false},
-            supporters: { recentSub: '-', recentDonation: '-', topDonations: { enabled: false }}
+            events: []
         };
         // noinspection JSUnusedGlobalSymbols
         this.debug = {
@@ -56,7 +56,8 @@ export class DefaultData {
             creepingLine: {
                 text: 'Would it be possible to change the width <span style="color: red;">attribute in the to portion</span> of the keyframe the width attribute in the to portion of the keyframe',
                 enabled: true
-            }
+            },
+            events: []
         };
 		
 		let someLocalLeaderBoard = {

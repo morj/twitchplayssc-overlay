@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
 
+export class OldEvents extends Component {
+    render() {
+        return <div className="log"></div>;
+    };
+}
 export class OverlayPanel extends Component {
     /*constructor(props) {
         super(props);
@@ -28,7 +33,7 @@ export class OverlayPanel extends Component {
 			}
 		`;
 		
-		return (
+        return (
             <div className="adjust-me-overlay text-regular">
                 <div className="unit-portrait-patch"/>
                 
@@ -117,6 +122,14 @@ export class OverlayPanel extends Component {
                         </tr>
                         </tbody>
                     </table>
+                </div>
+                <div className="in-game-events-widget">
+                    <OldEvents/>
+                    <div className="fresh-events">{
+                        state.events.map((item, index) => <div key={item.time + '' + index} className="event" data={item.time}>
+                            {item.body}
+                        </div>)
+                    }</div>
                 </div>
                 {/*<div className="right-panel chat">{
                     state.data.map((item, index) => <div key={index} className="message">

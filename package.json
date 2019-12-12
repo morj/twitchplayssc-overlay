@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://besov.net/overlay",
   "dependencies": {
+    "jquery": "^3.4.1",
     "node-sass": "^4.9.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
