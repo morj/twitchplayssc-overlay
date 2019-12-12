@@ -6,8 +6,8 @@ import {OverlayPanel} from './OverlayPanel';
 import {LeaderBoards} from './LeaderBoards';
 import {DefaultData} from './DefaultData';
 
-const MAX_EVENTS = 3;
-const EVENT_LIFETIME = 1000;
+const MAX_EVENTS = 5;
+const EVENT_LIFETIME = 10000;
 
 class App extends Component {
     constructor(props) {
@@ -15,30 +15,26 @@ class App extends Component {
         let defaults = new DefaultData();
         this.state = defaults.empty;
         // this.state = defaults.debugLeaderboards;
-        this.state = defaults.debug;
+        // this.state = defaults.debug;
         this.eventSource = new EventSource('http://localhost:8082/persist');
         this.lastChatMessage = null;
         // window.setInterval(() => this.pushData({text: 'this.eventSource = new EventSource(\'http://localhost:8082/persist\');'}), 2000);
 
-        this.testEvents();
+        // this.testEvents();
     }
 	
     testEvents() {
         var app = this;
         var counter = 0;
-        window.setInterval(function() { 
-            app.pushInGameEvents(['message ' + ++counter]);
-        }, 900);
-        window.setInterval(function() { 
-            app.pushInGameEvents(['message ' + ++counter]);
-        }, 1500);
+        window.setInterval(() => app.pushInGameEvents(['Player ==xxTinyDick2005xx=== got an achievement <span class="achievement-name">Huge dick</span>' + ++counter]), 4000);
+        window.setInterval(() => app.pushInGameEvents(['message <span class="player-name">PLAYER</span>' + ++counter]), 5000);
     }
     
     pushInGameEvents(newEvents) {
         let time = new Date().getTime();
         
         var logElement = $('.in-game-events-widget > .log');
-        newEvents.map(item => $('<div/>').addClass("event").attr('data', time).html(item).appendTo(logElement));
+        newEvents.map(item => $('<div/>').addClass("event").addClass("event-slide-x").attr('data', time).html(item).appendTo(logElement));
         
         var allEvents = logElement.find('.event');
         var excessElements = Math.max(allEvents.length - MAX_EVENTS, 0);
