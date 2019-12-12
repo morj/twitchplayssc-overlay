@@ -6,8 +6,8 @@ import {OverlayPanel} from './OverlayPanel';
 import {LeaderBoards} from './LeaderBoards';
 import {DefaultData} from './DefaultData';
 
-const MAX_EVENTS = 5;
-const EVENT_LIFETIME = 500;
+const MAX_EVENTS = 3;
+const EVENT_LIFETIME = 1000;
 
 class App extends Component {
     constructor(props) {
@@ -15,12 +15,12 @@ class App extends Component {
         let defaults = new DefaultData();
         this.state = defaults.empty;
         // this.state = defaults.debugLeaderboards;
-        // this.state = defaults.debug;
+        this.state = defaults.debug;
         this.eventSource = new EventSource('http://localhost:8082/persist');
         this.lastChatMessage = null;
         // window.setInterval(() => this.pushData({text: 'this.eventSource = new EventSource(\'http://localhost:8082/persist\');'}), 2000);
 
-        // this.testEvents();
+        this.testEvents();
     }
 	
     testEvents() {
@@ -28,33 +28,21 @@ class App extends Component {
         var counter = 0;
         window.setInterval(function() { 
             app.pushInGameEvents(['message ' + ++counter]);
-        }, 1000);
+        }, 900);
         window.setInterval(function() { 
             app.pushInGameEvents(['message ' + ++counter]);
-        }, 5000);
+        }, 1500);
     }
     
     pushInGameEvents(newEvents) {
         let time = new Date().getTime();
         
         var logElement = $('.in-game-events-widget > .log');
-        // "move" all current events to the old-log component which is never re-rendered. 
-        // this way we save and handle them with jQuery below without React messing with them
-        this.state.events.map(item => $('<div/>').addClass("event").attr('data', item.time).html(item.body).appendTo(logElement));
+        newEvents.map(item => $('<div/>').addClass("event").attr('data', time).html(item).appendTo(logElement));
         
-        // only keep so many events in the old log (remove excess old elements which still didn't fade out)
-        var currentlyInTheLogUI = logElement.find('.event');
-        var remainingSlotsForOldEvents = Math.max(MAX_EVENTS - newEvents.length, 0);
-        var excessOldEvents = Math.max(0, currentlyInTheLogUI.length - remainingSlotsForOldEvents);
-        currentlyInTheLogUI.slice(0, excessOldEvents).remove();
-        
-        let updatedEvents = [];
-        newEvents.map(item => updatedEvents.push({body: item, time: time}));        
-        let remainingSlotsForNewEvents = Math.min(newEvents.length, MAX_EVENTS);
-        let currentEvents = updatedEvents.slice(Math.max(updatedEvents.length - remainingSlotsForNewEvents, 0));
-        
-        this.setState(Object.assign(this.state, {events: currentEvents}));
-        console.log(currentEvents)
+        var allEvents = logElement.find('.event');
+        var excessElements = Math.max(allEvents.length - MAX_EVENTS, 0);
+        allEvents.slice(0, excessElements).remove();  // if we reached MAX_EVENTS, remove old events which still haven't faded out
     };
 	
     componentDidMount() {
@@ -86,7 +74,6 @@ class App extends Component {
             $('.in-game-events-widget > .log > .event').each(function() {
                 let eventTime = parseInt($(this).attr('data'));
                 if (time - eventTime > EVENT_LIFETIME) {
-                    console.log(time);
                     $(this).fadeOut(1000, function() { if ($(this).parent().length > 0) $(this).remove(); });
                 }
             });

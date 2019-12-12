@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export class OldEvents extends Component {
+export class EventLog extends Component {
     render() {
         return <div className="log"></div>;
     };
@@ -124,12 +124,7 @@ export class OverlayPanel extends Component {
                     </table>
                 </div>
                 <div className="in-game-events-widget">
-                    <OldEvents/>
-                    <div className="fresh-events">{
-                        state.events.map((item, index) => <div key={item.time + '' + index} className="event" data={item.time}>
-                            {item.body}
-                        </div>)
-                    }</div>
+                    <EventLog/>
                 </div>
                 {/*<div className="right-panel chat">{
                     state.data.map((item, index) => <div key={index} className="message">
