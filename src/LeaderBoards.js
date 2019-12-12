@@ -62,8 +62,7 @@ export class LeaderBoards extends Component {
 											{playerIndex + 1}&nbsp;
 											(<span className={this.getClimbClass(leaderboard.players[playerIndex].climb)}>{this.climbToString(leaderboard.players[playerIndex].climb)}</span>)
 										</td>
-										<td class={this.highlightClass(leaderboard.players[playerIndex], 'playerName')}>
-											{leaderboard.players[playerIndex].name}
+										<td class={this.highlightClass(leaderboard.players[playerIndex], 'playerName')} dangerouslySetInnerHTML={{__html: leaderboard.players[playerIndex].name}}>
 										</td>
 										<td class={'value ' + this.highlightClass(leaderboard.players[playerIndex], '')}>
 											{leaderboard.players[playerIndex].value}
@@ -118,7 +117,7 @@ export class LeaderBoards extends Component {
 											#{leaderboards[i].players[playerIndex].globalRank}&nbsp;
 											(<span className={this.getClimbClass(leaderboards[i].players[playerIndex].climb)}>{this.climbToString(leaderboards[i].players[playerIndex].climb)}</span>)
 										</td>
-										<td class="playerName">{leaderboards[i].players[playerIndex].name}</td>
+										<td class="playerName" dangerouslySetInnerHTML={{__html: leaderboards[i].players[playerIndex].name}}></td>
 										<td class="value">{leaderboards[i].players[playerIndex].value}</td>
 									</>
 								) : (
