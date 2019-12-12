@@ -15,11 +15,15 @@ class App extends Component {
         let defaults = new DefaultData();
         this.state = defaults.empty;
         // this.state = defaults.debugLeaderboards;
-        this.state = defaults.debug;
+        // this.state = defaults.debug;
         this.eventSource = new EventSource('http://localhost:8082/persist');
         this.lastChatMessage = null;
         // window.setInterval(() => this.pushData({text: 'this.eventSource = new EventSource(\'http://localhost:8082/persist\');'}), 2000);
 
+        // this.testEvents();
+    }
+	
+    testEvents() {
         var app = this;
         var counter = 0;
         window.setInterval(function() { 
@@ -29,7 +33,7 @@ class App extends Component {
             app.pushInGameEvents(['message ' + ++counter]);
         }, 5000);
     }
-	
+    
     pushInGameEvents(newEvents) {
         let time = new Date().getTime();
         
