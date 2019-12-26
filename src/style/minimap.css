@@ -21,20 +21,20 @@
 }
 
 .game-timer {
-    font-family: 'Major Mono Display', monospace;
+    font-family: 'HyperFont', monospace;
     font-weight: bolder;
-    font-size: 16px;
+    font-size: 20px;
     position: absolute;
     left: 240px;
-    bottom: 20px;
+    bottom: 22px;
     text-align: center;
     width: 105px;
     height: 22px;
-    color: green;
+    color: lightgreen;
 }
 
 .game-timer.negative {
-    color: red;
+    color: #ff6565;
 }
 
 .game-timer.almost-positive {
