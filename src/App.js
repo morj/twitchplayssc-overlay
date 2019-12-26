@@ -83,7 +83,8 @@ class App extends Component {
         window.setInterval(function() {
             let timeSeconds = Math.floor(new Date().getTime() / 1000);
             let secondsPassed = timeSeconds - parseInt($('.zero-time').val());
-            $('.game-timer').text(hhmmss(secondsPassed)).toggleClass('negative', secondsPassed < 0);
+            $('.game-timer').text(hhmmss(secondsPassed)).toggleClass('negative', secondsPassed < 0)
+                .toggleClass('almost-positive', secondsPassed > -30 && secondsPassed < 1);
             
         }, 200);
     }

@@ -43,3 +43,14 @@ body {
 .game-timer.negative {
     color: red;
 }
+
+.game-timer.almost-positive {
+    color: yellow !important;
+    animation: blinker 0.2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
