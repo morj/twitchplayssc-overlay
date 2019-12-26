@@ -22,3 +22,24 @@ body {
     height: 342px;
     background-color: white;
 }
+
+.zero-time {
+    display:none;
+}
+
+.game-timer {
+    font-family: 'Major Mono Display', monospace;
+    font-weight: bolder;
+    font-size: 16px;
+    position: absolute;
+    left: 240px;
+    bottom: 20px;
+    text-align: center;
+    width: 105px;
+    height: 22px;
+    color: green;
+}
+
+.game-timer.negative {
+    color: red;
+}

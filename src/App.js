@@ -9,6 +9,18 @@ import {DefaultData} from './DefaultData';
 const MAX_EVENTS = 5;
 const EVENT_LIFETIME = 10000;
 
+function hhmmss(sec_num) {
+    let secAbs = Math.abs(sec_num);
+    var hours   = Math.floor(secAbs / 3600);
+    var minutes = Math.floor((secAbs - (hours * 3600)) / 60);
+    var seconds = secAbs - (hours * 3600) - (minutes * 60);
+
+    if (sec_num < 0) {hours = "-"+hours}
+    if (minutes < 10) {minutes = "0"+minutes;}
+    if (seconds < 10) {seconds = "0"+seconds;}
+    return hours+':'+minutes+':'+seconds;
+}
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -26,14 +38,16 @@ class App extends Component {
     testEvents() {
         var app = this;
         var counter = 0;
-        window.setInterval(() => app.pushInGameEvents(['Player ==xxTinyDick2005xx=== got an achievement <span class="achievement-name">Huge dick</span>' + ++counter]), 4000);
-        window.setInterval(() => app.pushInGameEvents(['message <span class="player-name">PLAYER</span>' + ++counter]), 5000);
+        window.setInterval(() => app.pushInGameEvents(['<span class="player-name">naturalhomemadenutella</span> has been awarded <span class="achievement-name">I Drink your Milkshake</span>']), 4000);
+        window.setInterval(() => app.pushInGameEvents(['Test text <span class="player-name">PLAasdasdYERahorseinahospital</span> has joined the game ' + ++counter]), 5000);
     }
     
     pushInGameEvents(newEvents) {
         let time = new Date().getTime();
         
         var logElement = $('.in-game-events-widget > .log');
+        
+        
         newEvents.map(item => $('<div/>').addClass("event").addClass("event-slide-x").attr('data', time).html(item).appendTo(logElement));
         
         var allEvents = logElement.find('.event');
@@ -45,6 +59,7 @@ class App extends Component {
         const app = this;
 
         this.startUpdatingInGameEventsLog();
+        this.startUpdatingInGameClock();
 
         this.eventSource.onmessage = (e) => {
             let payload = JSON.parse(e.data);
@@ -64,6 +79,15 @@ class App extends Component {
         };
     }
 
+    startUpdatingInGameClock() {
+        window.setInterval(function() {
+            let timeSeconds = Math.floor(new Date().getTime() / 1000);
+            let secondsPassed = timeSeconds - parseInt($('.zero-time').val());
+            $('.game-timer').text(hhmmss(secondsPassed)).toggleClass('negative', secondsPassed < 0);
+            
+        }, 200);
+    }
+    
     startUpdatingInGameEventsLog() {
         window.setInterval(function() {
             let time = new Date().getTime();
