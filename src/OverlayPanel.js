@@ -99,6 +99,11 @@ export class OverlayPanel extends Component {
                         </table>
                     </div>
                 </div>
+                <div className="minimap-container">
+                    <div className="minimap">
+                    
+                    </div>
+                </div>
                 <div className="command-card">
                     <table className="structure-table">
                         <tbody>

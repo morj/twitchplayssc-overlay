@@ -4,3 +4,6 @@ body {
     background: url("../images/bg2.png") no-repeat;
 }
 
+.minimap {
+    background: url("../images/minimap_example.png") no-repeat;
+}
