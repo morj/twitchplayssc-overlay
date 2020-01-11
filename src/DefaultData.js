@@ -11,7 +11,7 @@ export class DefaultData {
             },
             upgrades: {},
             attentionBanner: {text: '', enabled: false},
-            creepingLine: {text: '', enabled: false},
+            creepingLine: {text: 'Join our Discord server to discuss tactics, updates, suggestions and bugs! - RncDm2K - (link is in the description) -', enabled: false},
             gameZeroTime: Math.floor(new Date().getTime() / 1000)
         };
         // noinspection JSUnusedGlobalSymbols
