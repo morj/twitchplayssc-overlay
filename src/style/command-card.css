@@ -1,10 +1,10 @@
 .command-card {
 	position: absolute;
-	left:1536px;
-	top: 840px;
+	left:1546px;
+	top: 793px;
 	width: 365px;
 	height: 229px;
-	background-image: url("../images/command_card_bg.png");
+	background-image: url("../images/command_card_bg1.png");
 	background-repeat: no-repeat;
 	padding: 18px 0 0 7px;
 }

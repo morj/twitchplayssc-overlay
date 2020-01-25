@@ -7,6 +7,14 @@
     overflow: hidden;
 }
 
+.overlay-container {
+    position: absolute;
+    width: 1920px;
+    height: 412px;
+    bottom: 0;
+    background: url("../images/overlay toolbox alt.png") no-repeat;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
