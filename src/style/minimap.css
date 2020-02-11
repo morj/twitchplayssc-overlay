@@ -16,7 +16,7 @@
     height: 342px;
 }
 
-.zero-time {
+.zero-time, .time-correction {
     display:none;
 }
 

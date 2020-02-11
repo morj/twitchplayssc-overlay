@@ -12,7 +12,8 @@ export class DefaultData {
             upgrades: {},
             attentionBanner: {text: '', enabled: false},
             creepingLine: {text: 'Join our Discord server to discuss tactics, updates, suggestions and bugs! - RncDm2K - (link is in the description) -', enabled: false},
-            gameZeroTime: Math.floor(new Date().getTime() / 1000)
+            gameZeroTime: Math.floor(new Date().getTime() / 1000),
+            timer : { now : 0 }
         };
         // noinspection JSUnusedGlobalSymbols
         this.debug = {
@@ -57,7 +58,8 @@ export class DefaultData {
                 text: 'Would it be possible to change the width <span style="color: red;">attribute in the to portion</span> of the keyframe the width attribute in the to portion of the keyframe',
                 enabled: true
             },
-            gameZeroTime: Math.floor(new Date().getTime() / 1000) + 5
+            gameZeroTime: Math.floor(new Date().getTime() / 1000),
+            timer : { now : 5 }
         };
 		
 		let someLocalLeaderBoard = {

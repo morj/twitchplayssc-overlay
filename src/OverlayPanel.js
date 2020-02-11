@@ -102,6 +102,7 @@ export class OverlayPanel extends Component {
                 <div className="minimap-container">
                     <div className="minimap"/>
                     <input className="zero-time" value={state.gameZeroTime}/>
+                    <input className="time-correction" value={state.timer.now}/>
                     <div className="game-timer"/>
                 </div>
                 <div className="command-card">

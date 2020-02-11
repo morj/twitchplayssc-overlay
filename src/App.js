@@ -82,7 +82,16 @@ class App extends Component {
     startUpdatingInGameClock() {
         window.setInterval(function() {
             let timeSeconds = Math.floor(new Date().getTime() / 1000);
-            let secondsPassed = timeSeconds - parseInt($('.zero-time').val());
+            let timeCorrection = parseInt($('.time-correction').val());
+            let zeroTime = parseInt($('.zero-time').val());
+            var secondsPassed;
+            if (timeCorrection !== 0) {
+                secondsPassed = timeCorrection;
+                $('.zero-time').val(timeSeconds - timeCorrection);
+                $('.time-correction').val(0);
+            } else {
+                secondsPassed = timeSeconds - zeroTime;
+            }
             $('.game-timer').text(hhmmss(secondsPassed)).toggleClass('negative', secondsPassed < 0)
                 .toggleClass('almost-positive', secondsPassed > -30 && secondsPassed < 1);
             
