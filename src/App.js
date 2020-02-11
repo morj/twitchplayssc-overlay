@@ -82,13 +82,13 @@ class App extends Component {
     startUpdatingInGameClock() {
         window.setInterval(function() {
             let timeSeconds = Math.floor(new Date().getTime() / 1000);
-            let timeCorrection = parseInt($('.time-correction').val());
-            let zeroTime = parseInt($('.zero-time').val());
+            let timeCorrection = parseInt($('.time-correction').text());
+            let zeroTime = parseInt($('.zero-time').text());
             var secondsPassed;
             if (timeCorrection !== 0) {
                 secondsPassed = timeCorrection;
-                $('.zero-time').val(timeSeconds - timeCorrection);
-                $('.time-correction').val(0);
+                $('.zero-time').text(timeSeconds - timeCorrection);
+                $('.time-correction').text(0);
             } else {
                 secondsPassed = timeSeconds - zeroTime;
             }
