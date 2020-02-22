@@ -24,7 +24,7 @@ export class LeaderBoards extends Component {
 							<div className="mvp-header">
 								<span className="achievement-icon cup"/>
 								<span className="mvp">MVP:</span>
-								<span className="playername">{state.mvp.player}</span>
+								<span className="playername" dangerouslySetInnerHTML={{__html: state.mvp.player}}></span>
 								<span className="achievement-icon cup"/>
 							</div>
 						</div>	

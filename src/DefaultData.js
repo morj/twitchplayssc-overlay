@@ -65,14 +65,14 @@ export class DefaultData {
 		let someLocalLeaderBoard = {
 			title: 'XP',
 			players: [
-				{name: 'superlo ngplayeasd asdasdasdasdrname8', value: 100500, climb: 2999, globalRank: 3400},
-				{name: 'superlongplayername2', value: 111111, climb: 0, globalRank: 1000},
-				{name: 'supe rlongplayername3', value: 23, climb: 10, globalRank: 3},
+				{name: '<span class="league-inline master"></span> superlo ngplayeasd asdasdasdasdrname8', value: 100500, climb: 2999, globalRank: 3400},
+				{name: '<span class="league-inline silver"></span> superlongplayername2', value: 111111, climb: 0, globalRank: 1000},
+				{name: '<span class="league-inline bronze"></span> supe rlongplayername3', value: 23, climb: 10, globalRank: 3},
 				{name: '<span style="color: red;">superlongplayername4</span>', value: 23, climb: -2, globalRank: 1},
-				{name: 'sup erlongplayername5', value: 23, climb: 0, globalRank: 3},
-				{name: 'superlongplayername6', value: 23, climb: 1, globalRank: 4},
-				{name: 'superlongplayername7', value: 23, climb: -1, globalRank: 5},
-				{name: 'superlongplayeasdasdasdasdasdrname8', value: 23, climb: 0, globalRank: 7},
+				{name: '<span class="league-inline gold"></span> sup erlongplayername5', value: 23, climb: 0, globalRank: 3},
+				{name: '<span class="league-inline grandmaster"></span> superlongplayername6', value: 23, climb: 1, globalRank: 4},
+				{name: '<span class="league-inline diamond"></span> superlongplayername7', value: 23, climb: -1, globalRank: 5},
+				{name: '<span class="league-inline platinum"></span> superlongplayeasdasdasdasdasdrname8', value: 23, climb: 0, globalRank: 7},
 				{name: 'superlongplayername9', value: 23, climb: 2, globalRank: 100},
 				{name: 'superlongplayername10', value: 23, climb: 0, globalRank: 34}
 			]
@@ -82,7 +82,7 @@ export class DefaultData {
 			title: 'Last week',
 			players: [
 				{name: 'superlo ngplayeasd asdasdasdasdrname8', value: 100500, climb: 10, globalRank: 3},
-				{name: 'superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
 				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
 				{name: 'supe rlongplayername3', value: 23, climb: 0, globalRank: 3},
 				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
@@ -113,7 +113,7 @@ export class DefaultData {
 				duration: '123 min 15 sec'
 			},
 			mvp: {
-				player: 'Tinydick',
+				player: '<span class="league-inline master"></span> Tinydick',
 				mined: {
 					minerals: 51234,
 					gas: 12389
