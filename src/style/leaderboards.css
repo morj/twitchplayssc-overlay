@@ -73,7 +73,7 @@ body {
     vertical-align: middle;
 }
 
-.leaderboards-table .league-inline { width: 25px; height: 25px; }
+.leaderboards-table .league-inline { width: 25px; height: 23px; margin-top: -6px;}
 .mvp-container .league-inline { width: 60px; height: 60px; margin-top: -10px;}
 
 .league-inline.bronze { background-image: url("../images/icons_leagues/icon_bronze.png"); }
