@@ -65,38 +65,53 @@ export class DefaultData {
 		let someLocalLeaderBoard = {
 			title: 'XP',
 			players: [
-				{name: '<span class="league-inline master"></span> superlo ngplayeasd asdasdasdasdrname8', value: 100500, climb: 2999, globalRank: 3400},
-				{name: '<span class="league-inline silver"></span> superlongplayername2', value: 111111, climb: 0, globalRank: 1000},
-				{name: '<span class="league-inline bronze"></span> supe rlongplayername3', value: 23, climb: 10, globalRank: 3},
-				{name: '<span style="color: red;">superlongplayername4</span>', value: 23, climb: -2, globalRank: 1},
-				{name: '<span class="league-inline gold"></span> sup erlongplayername5', value: 23, climb: 0, globalRank: 3},
-				{name: '<span class="league-inline grandmaster"></span> superlongplayername6', value: 23, climb: 1, globalRank: 4},
-				{name: '<span class="league-inline diamond"></span> superlongplayername7', value: 23, climb: -1, globalRank: 5},
-				{name: '<span class="league-inline platinum"></span> superlongplayeasdasdasdasdasdrname8', value: 23, climb: 0, globalRank: 7},
-				{name: 'superlongplayername9', value: 23, climb: 2, globalRank: 100},
-				{name: 'superlongplayername10', value: 23, climb: 0, globalRank: 34}
+				{name: '<span class="league-inline master"></span><p>superlo ngplayeasd asdasdasdasdrname8</p><span class="league-inline medal ap31sin"></span><span class="league-inline medal nutella"></span><span class="league-inline medal horsie"></span>', value: 100500, climb: 99, globalRank: 99},
+				{name: '<span class="league-inline silver"></span><p>naturalhomemadenutella</p>', value: 111111, climb: 0, globalRank: 99},
+				{name: '<span class="league-inline bronze"></span><p>supe rlongplayername3</p>', value: 23, climb: 10, globalRank: 3},
+				{name: '<span style="color: red;"><p>superlongplayername4</p></span>', value: 23, climb: -2, globalRank: 1},
+				{name: '<span class="league-inline gold"></span><p>sup erlongplayername5</p>', value: 23, climb: 0, globalRank: 3},
+				{name: '<span class="league-inline grandmaster"></span><p>superlongplayername6</p>', value: 23, climb: 1, globalRank: 4},
+				{name: '<span class="league-inline diamond"></span><p>superlonasdasdasdgplayername7</p><span class="league-inline medal"></span>', value: 23, climb: -1, globalRank: 5},
+				{name: '<span class="league-inline platinum"></span><p>superlongplayeasdasdasdasdasdrname8</p><span class="league-inline medal"></span><span class="league-inline medal"></span>', value: 23, climb: 0, globalRank: 7},
+				{name: '<p>superlongplayername9</p>', value: 23, climb: 2, globalRank: 10},
+				{name: '<p>superlongplayernasdfasdfasdfasdfame10</p><span class="league-inline medal nutella"></span><span class="league-inline medal top10"></span><span class="league-inline medal forge"></span>', value: 23, climb: 0, globalRank: 34}
 			]
 		};
 		
 		let someGlobalLeaderBoard = {
 			title: 'Last week',
 			players: [
-				{name: 'superlo ngplayeasd asdasdasdasdrname8', value: 100500, climb: 10, globalRank: 3},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 100, globalRank: 300, highlight: true},
 				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
-				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
-				{name: 'supe rlongplayername3', value: 23, climb: 0, globalRank: 3},
-				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
-				{name: '<span style="color: red;">superlongplayername4</span>', value: 23, climb: 10, globalRank: 3},
-				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
-				{name: 'sup erlongplayername5', value: 23, climb: 10, globalRank: 3},
-				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3, highlight: true},
-				{name: 'superlongplayername6', value: 23, climb: 10, globalRank: 3},
-				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
-				{name: 'superlongplayername7', value: 23, climb: 10, globalRank: 3},
-				{name: 'superlongplayername7', value: 1111111, climb: 10, globalRank: 3},
-				{name: 'superlongplayeasdasdasdasdasdrname8', value: 23, climb: 10, globalRank: 3},
-				{name: 'superlongplayername9', value: 23, climb: 10, globalRank: 3},
-				{name: 'superlongplayername10', value: 23, climb: 10, globalRank: 3}
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+                {name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+                {name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> superlongplayername2', value: 111111, climb: 10, globalRank: 3, highlight: true},
+				{name: '<span class="league-inline master"></span> naturalhomemadenutella <span class="league-inline medal"></span><span class="league-inline medal"></span><span class="league-inline medal"></span>', value: 111111, climb: 10, globalRank: 3, highlight: true}
+				
 			]
 		};
 		

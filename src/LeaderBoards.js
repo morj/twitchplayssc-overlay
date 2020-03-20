@@ -34,7 +34,7 @@ export class LeaderBoards extends Component {
 						</div>
 					</div>	
 					<div className="fullmode-xp-leaderboards-screen">
-						<div class="xp-leaderboard-top">Leaderboards: XP</div>
+						<div className="xp-leaderboard-top">Leaderboards: XP</div>
 						<div className="global-leaderboard leaderboard">
 							{this.renderGlobalLeaderboards(state.globalLeaderboards)}
 						</div>
@@ -47,10 +47,11 @@ export class LeaderBoards extends Component {
 	renderGlobalLeaderboards(leaderboards)
 	{
 		return (
-			<table class="leaderboards-table global">
+			<table className="leaderboards-table global">
+                <tbody>
 				<tr>
 					{leaderboards.map((leaderboard) => 
-					<th colspan="3">{leaderboard.title + ' '}</th>
+					<th colSpan="3">{leaderboard.title + ' '}</th>
 					)}
 				</tr>
 				{[...Array(30)].map((playerPlace, playerIndex) => 
@@ -58,19 +59,19 @@ export class LeaderBoards extends Component {
 						leaderboards.map((leaderboard) => <>
 							{leaderboard.players.length > playerIndex ? (
 								<>
-										<td class={this.highlightClass(leaderboard.players[playerIndex], 'rank')}>
+										<td className={this.highlightClass(leaderboard.players[playerIndex], 'rank')}>
 											{playerIndex + 1}&nbsp;
 											(<span className={this.getClimbClass(leaderboard.players[playerIndex].climb)}>{this.climbToString(leaderboard.players[playerIndex].climb)}</span>)
 										</td>
-										<td class={this.highlightClass(leaderboard.players[playerIndex], 'playerName')} dangerouslySetInnerHTML={{__html: leaderboard.players[playerIndex].name}}>
+										<td className={this.highlightClass(leaderboard.players[playerIndex], 'playerName')} dangerouslySetInnerHTML={{__html: leaderboard.players[playerIndex].name}}>
 										</td>
-										<td class={'value ' + this.highlightClass(leaderboard.players[playerIndex], '')}>
+										<td className={'value ' + this.highlightClass(leaderboard.players[playerIndex], '')}>
 											{leaderboard.players[playerIndex].value}
 										</td>
 									</>
 								) : (
 									<>
-										<td class="rank">{playerIndex + 1}</td>
+										<td className="rank">{playerIndex + 1}</td>
 										<td></td>
 										<td></td>
 									</>
@@ -78,6 +79,7 @@ export class LeaderBoards extends Component {
 						</>)
 					}</tr>
 				)}
+                </tbody>
 			</table>
 		);
 	}
@@ -90,9 +92,11 @@ export class LeaderBoards extends Component {
 	renderLocalLeaderboards(leaderboards)
 	{
 		return (
-			<table class="leaderboards-table local">
-				{this.renderSomeLocalLeaderboards(leaderboards, [0, 1, 2])}
+			<table className="leaderboards-table local">
+                <tbody>
+                {this.renderSomeLocalLeaderboards(leaderboards, [0, 1, 2])}
 				{this.renderSomeLocalLeaderboards(leaderboards, [3, 4, 5])}
+                </tbody>
 			</table>
 		);
 	}
@@ -101,24 +105,24 @@ export class LeaderBoards extends Component {
 	{
 		return (
 			<>
-				<tr>
+                <tr>
 					{indexArray.map((i) => 
-					<th colspan="4">{leaderboards[i].title + ' '}</th>
+					<th colSpan="4">{leaderboards[i].title + ' '}</th>
 					)}
 				</tr>
 				{[...Array(10)].map((playerPlace, playerIndex) => 
 					<tr key={playerIndex + 1}>{
 						indexArray.map((i) => 
 							<>
-								<td class="rank">{playerIndex + 1}</td>
+								<td className="rank">{playerIndex + 1}</td>
 								{leaderboards[i].players.length > playerIndex ? (
 									<>
-										<td class="global-rank">
+										<td className="global-rank">
 											#{leaderboards[i].players[playerIndex].globalRank}&nbsp;
 											(<span className={this.getClimbClass(leaderboards[i].players[playerIndex].climb)}>{this.climbToString(leaderboards[i].players[playerIndex].climb)}</span>)
 										</td>
-										<td class="playerName" dangerouslySetInnerHTML={{__html: leaderboards[i].players[playerIndex].name}}></td>
-										<td class="value">{leaderboards[i].players[playerIndex].value}</td>
+										<td className="playerName" dangerouslySetInnerHTML={{__html: leaderboards[i].players[playerIndex].name}}></td>
+										<td className="value">{leaderboards[i].players[playerIndex].value}</td>
 									</>
 								) : (
 									<>

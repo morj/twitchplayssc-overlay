@@ -83,6 +83,25 @@ body {
 .league-inline.diamond { background-image: url("../images/icons_leagues/icon_diamond.png"); }
 .league-inline.master { background-image: url("../images/icons_leagues/icon_master.png"); }
 .league-inline.grandmaster { background-image: url("../images/icons_leagues/icon_grandmaster.png"); }
+
+.league-inline.medal { 
+    background-image: url("../images/icons_leagues/icon_grandmaster.png"); 
+    float:right; 
+    position: relative;
+    display: block;
+    z-index: 1000;
+    margin-top: 0px;
+}
+
+.league-inline.medal.forge { background-image: url("../images/icons_medals/forge.png"); }
+.league-inline.medal.nutella { background-image: url("../images/icons_medals/nutella.png"); }
+.league-inline.medal.top10 { background-image: url("../images/icons_medals/top10.png"); }
+.league-inline.medal.top25 { background-image: url("../images/icons_medals/top25.png"); }
+.league-inline.medal.top50 { background-image: url("../images/icons_medals/top50.png"); }
+.league-inline.medal.survival { background-image: url("../images/icons_medals/survival.png"); }
+.league-inline.medal.horsie { background-image: url("../images/icons_medals/horsie.png"); }
+.league-inline.medal.ap31sin { background-image: url("../images/icons_medals/ap31sin.png"); }
+
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
@@ -134,10 +153,20 @@ body {
 	font-family: Lucida Console;
 	font-size:20px;
 }
-.leaderboards-table td.playerName{
+.leaderboards-table td.playerName {
 	text-align: left;
-	max-width: 250px;
-	text-overflow: ellipsis;
+	max-width: 300px;
+	white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.leaderboards-table td.playerName p {
+    margin: 0;
+    overflow-x: hidden;
+    vertical-align: top;
+    display: inline-block;
+	width: 300px;
+    text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
@@ -170,7 +199,7 @@ body {
 
 .fullmode-game-screen {
 	/*opacity: 0;*/
-	animation: 20s fadeOut;
+	animation: 40s fadeOut;
 	animation-fill-mode: forwards;
 }
 
@@ -179,7 +208,7 @@ body {
 	top: -990px;
 	/*opacity: 1;*/
 	opacity: 0;
-	animation: 20s fadeIn;
+	animation: 40s fadeIn;
 	animation-fill-mode: forwards;
 }
 

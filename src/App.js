@@ -60,7 +60,9 @@ class App extends Component {
 
         this.startUpdatingInGameEventsLog();
         this.startUpdatingInGameClock();
-
+        
+        this.adjustPlayerNamesInleaderBoardICannotCss();
+        
         this.eventSource.onmessage = (e) => {
             let payload = JSON.parse(e.data);
             switch (payload['command'] || 'whatever') {
@@ -79,6 +81,16 @@ class App extends Component {
         };
     }
 
+    adjustPlayerNamesInleaderBoardICannotCss() {
+        $('.leaderboards-table td.playerName').each(function() {
+            let medals = $(this).find('.league-inline.medal');
+            let playerNameText = $(this).find('p');
+            let cutLength = medals.width() * medals.length;
+            playerNameText.css('width', playerNameText.width() - cutLength);
+        });
+        
+    }
+    
     startUpdatingInGameClock() {
         window.setInterval(function() {
             let timeSeconds = Math.floor(new Date().getTime() / 1000);
