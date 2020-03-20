@@ -26,7 +26,7 @@
 	width: 70%;
 	height: 20%;
 	margin-left: 15%;
-	margin-top: 7.5%;
+	margin-top: 3%;
 	font-size: 36px;
 	text-align: center;
 }
@@ -43,8 +43,22 @@
 .global-center-box > .game-description {
 	display: inline-block;
 	width: 70%;
-	height: 30%;
+	height: 20%;
 	margin-left: 15%;
 	font-size: 24px;
 	text-align: center;
+}
+
+.global-center-box .tip {
+    color: #b9936f;
+}
+
+.global-center-box > .tip-container {
+	display: inline-block;
+	width: 70%;
+	height: 15%;
+	margin-left: 15%;
+	font-size: 24px;
+	text-align: center;
+    color: #71a3f8;
 }

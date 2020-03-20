@@ -42,6 +42,7 @@ export class OverlayPanel extends Component {
 					{state.gameIntro && <div className="game-intro">{state.gameIntro.intro}</div>}
 					{state.gameIntro && <div className="game-opponent">{state.gameIntro.opponent}</div>}
 					{state.gameIntro && <div className="game-description">{state.gameIntro.description}</div>}
+					{state.gameIntro && <div className="tip-container" dangerouslySetInnerHTML={{__html: state.gameIntro.tip}}></div>}
 				</div>}
 
                 {state.attentionBanner && state.attentionBanner.enabled &&
