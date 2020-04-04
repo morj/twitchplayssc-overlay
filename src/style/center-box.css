@@ -18,7 +18,7 @@
 	border: 5px solid #71a3f8;
 	font-family: "Michroma";
 	z-index: -1000;
-	opacity:0.7;
+	opacity:0.85;
 }
 
 .global-center-box > .game-intro {
@@ -51,8 +51,18 @@
 
 .global-center-box .tip {
     color: #b9936f;
+    font-weight: bold;
 }
 
+.global-center-box .command {
+    color: rgb(144, 238, 144);
+    font-weight: bold;
+}
+   
+.global-center-box .unit-type {
+    color: rgb(239, 234, 176);
+}
+   
 .global-center-box > .tip-container {
 	display: inline-block;
 	width: 70%;
