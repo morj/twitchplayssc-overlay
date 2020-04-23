@@ -152,11 +152,12 @@ body {
 	font-family: Lucida Console;
 	font-size:20px;
 }
-.leaderboards-table td.playerName {
+.leaderboards-table td.playerName div {
 	text-align: left;
-	max-width: 300px;
 	white-space: nowrap;
     overflow-x: hidden;
+    width: 340px;
+    margin: 0;
 }
 
 .leaderboards-table td.playerName p {
@@ -164,7 +165,6 @@ body {
     overflow-x: hidden;
     vertical-align: top;
     display: inline-block;
-	width: 300px;
     text-overflow: ellipsis;
 	white-space: nowrap;
 }

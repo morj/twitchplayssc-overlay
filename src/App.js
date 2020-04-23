@@ -86,7 +86,7 @@ class App extends Component {
             let medals = $(this).find('.league-inline.medal');
             let playerNameText = $(this).find('p');
             let cutLength = medals.width() * medals.length;
-            playerNameText.css('width', playerNameText.width() - cutLength);
+            playerNameText.css('width', playerNameText.parent().width() - cutLength - 35);
         });
         
     }
