@@ -48,6 +48,17 @@ export class LeaderBoards extends Component {
 	{
 		return (
 			<table className="leaderboards-table global">
+                <colgroup>
+                    <col style={{width: '120px'}} />
+                    <col style={{width: '380px'}} />
+                    <col style={{width: '100px'}} />
+                    <col style={{width: '120px'}} />
+                    <col style={{width: '380px'}} />
+                    <col style={{width: '100px'}} />
+                    <col style={{width: '120px'}} />
+                    <col style={{width: '380px'}} />
+                    <col style={{width: '100px'}} />
+                </colgroup>
                 <tbody>
 				<tr>
 					{leaderboards.map((leaderboard) => 
@@ -93,6 +104,20 @@ export class LeaderBoards extends Component {
 	{
 		return (
 			<table className="leaderboards-table local">
+                <colgroup>
+                    <col style={{width: '50px'}} />
+                    <col style={{width: '120px'}} />
+                    <col style={{width: '340px'}} />
+                    <col style={{width: '90px'}} />
+                    <col style={{width: '50px'}} />
+                    <col style={{width: '120px'}} />
+                    <col style={{width: '340px'}} />
+                    <col style={{width: '90px'}} />
+                    <col style={{width: '50px'}} />
+                    <col style={{width: '120px'}} />
+                    <col style={{width: '340px'}} />
+                    <col style={{width: '90px'}} />
+                </colgroup>
                 <tbody>
                 {this.renderSomeLocalLeaderboards(leaderboards, [0, 1, 2])}
 				{this.renderSomeLocalLeaderboards(leaderboards, [3, 4, 5])}
