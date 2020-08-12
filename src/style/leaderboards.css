@@ -106,9 +106,11 @@ body {
 /*------------------------------------------------------*/
 
 .leaderboard {
-    margin: 20px auto 0 auto;
-    width: 1800px;
-    border: 1px solid #c5a79a;
+    margin: 0px auto 0 auto;
+    width: 1920px;
+    border-width: 1px 0 2px 0;
+    border-style: solid;
+    border-color: #c5a79a;
 }
 
 .game-leaderboard {
@@ -199,7 +201,7 @@ body {
 
 .fullmode-game-screen {
 	/*opacity: 0;*/
-	animation: 30s fadeOut;
+	animation: 300s fadeOut;
 	animation-fill-mode: forwards;
 }
 
@@ -208,7 +210,7 @@ body {
 	top: -990px;
 	/*opacity: 1;*/
 	opacity: 0;
-	animation: 30s fadeIn;
+	animation: 300s fadeIn;
 	animation-fill-mode: forwards;
 }
 
